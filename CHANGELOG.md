@@ -22,4 +22,4 @@ All notable changes to this project will be documented in this file.
 - Initial GUI scaffolding, rules/ML engines, Solana/EVM wallet managers
 - Paper mode trading flow and tests
 
-[1.0.0]: https://example.com/releases/1.0.0
+[1.0.0]: https://github.com/Snapwave333/membot/releases/tag/v1.0.0
