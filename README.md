@@ -1,7 +1,3 @@
-[![Docs](https://img.shields.io/badge/Docs-GitHub%20Pages-blue?logo=github)](https://snapwave333.github.io/membot/)
-
-[Quick Start: Idiot's Guide — Day One Profit Strategy](IDIOTS_GUIDE.md)
-
 # NeoMeme Markets — Autonomous Hardened Meme‑Coin Trading Bot
 
 <p align="center">
@@ -356,6 +352,47 @@ Note: If the snake image is 404 initially, run the "Generate Datas" workflow onc
   We simplified the initial release to Solana to reduce complexity and improve reliability, replacing the earlier PayPal concept.
 - How do I add a new strategy?  
   Implement it in `src/trading/strategy.py` and register it with the rules/ML engine. Add tests in `tests/`.
+
+## 🚀 Future Roadmap & Planned Features
+
+This roadmap outlines the planned expansion of NeoMeme Markets across three phases. Timelines are indicative and may adjust based on testing and security reviews. Each phase prioritizes fail‑closed safety and compliance.
+
+### Phase 1 — Optimization & Deepening (v1.1.x)
+
+| Area | Goals | Key Deliverables | Success Metrics | Target Release |
+|---|---|---|---|---|
+| **Performance** | Reduce latency and CPU/memory overhead | Python 3.12 optimizations, profiling, async I/O, caching of RPC calls | >30% faster signal‑to‑trade path; lower memory spikes | v1.1.x |
+| **Trading Engine** | Improve strategy depth and execution reliability | Modular strategy packs; slippage/latency aware order placement; liquidity‑weighted position sizing | Fewer failed orders; better P&L consistency | v1.1.x |
+| **Risk & Safety** | Harden guardrails | Daily max loss; portfolio drawdown caps; automatic profit sweep; enhanced kill‑switch semantics | No trades beyond limits; instant stop on kill‑switch | v1.1.x |
+| **Solana Integration** | Better routing & fees | Jupiter routing improvements; compute budget tuning; priority fee management | Lower tx failures and costs | v1.1.x |
+| **EVM Support** | Safer approvals and router handling | Router compatibility matrix; allowance management; gas and nonce reliability | Stable EVM wallet operations | v1.1.x |
+| **GUI/UX** | Clarity and safety | Emergency controls surfaced; status signals; accessibility improvements | Faster operator reaction time | v1.1.x |
+| **Docs & Compliance** | Reliable docs, safety clarity | Kraken Compliance refinements; link linting (Lychee); Mermaid validation; Jekyll sitemap | Clean CI checks; fewer broken links | v1.1.x |
+| **Testing & QA** | Expand coverage and scenarios | Stress and load tests; end‑to‑end paper mode runs; fuzz inputs for safety modules | >85% coverage for critical paths | v1.1.x |
+
+### Phase 2 — Multi‑Chain & Arbitrage (v1.2.x)
+
+| Area | Goals | Key Deliverables | Success Metrics | Target Release |
+|---|---|---|---|---|
+| **Cross‑Chain Execution** | Operate across Solana + EVM | Unified wallet manager; synchronized balances; execution safety across chains | Reliable cross‑chain trade flow | v1.2.x |
+| **Arbitrage** | Exploit price dislocations | Cross‑DEX and cross‑chain price watchers; safe bridging workflows; configurable latency windows | Measurable arbitrage yield with controlled risk | v1.2.x |
+| **DEX Routing** | Smarter path selection | Route scoring (fees, slippage, reliability); fallback routers; retry policies | Higher fill rates; lower cost basis | v1.2.x |
+| **Risk Across Chains** | Unified guardrails | Cross‑chain exposure limits; per‑venue risk caps; hedging hooks | Stable risk profile during multi‑venue ops | v1.2.x |
+| **Observability** | Holistic monitoring | Cross‑chain P&L; per‑venue metrics; alerting on anomalies | Faster incident detection | v1.2.x |
+| **Automation** | Repeatable workflows | Auto profit sweep; scheduled reconciliations; nightly link checks; optional CRON tasks | Reduced operator workload | v1.2.x |
+
+### Phase 3 — Institutionalization & AI (v1.3+)
+
+| Area | Goals | Key Deliverables | Success Metrics | Target Release |
+|---|---|---|---|---|
+| **Compliance & Audit** | Enterprise‑grade controls | Audit trails; immutable logs; role‑based access; policy enforcement | External audit readiness | v1.3+ |
+| **KYC/AML Integrations** | Safer counterparty operations | Optional KYC/AML hooks; sanction screening; risk scoring | Lower operational compliance risk | v1.3+ |
+| **AI/ML Advancements** | Smarter decisioning | Model registry; feature store; online learning; confidence calibration; explainability | Better risk‑adjusted returns with transparency | v1.3+ |
+| **Reliability & SRE** | Ops maturity | Health checks; circuit breakers; chaos testing; runbooks; auto remediation hooks | High MTBF; fast MTTR | v1.3+ |
+| **Data & Storage** | Durable state | Versioned datasets; backup/restore; encryption at rest; retention policies | Predictable recovery; secure data | v1.3+ |
+| **Ecosystem Connectors** | Venue expansion | CEX connectors (read‑only first); safe order APIs; bridging orchestration | Expanded market reach safely | v1.3+ |
+
+> Note: All features will respect the fail‑closed security posture. Live‑trading features require successful paper‑mode validation and CI pass prior to release.
 
 ## Troubleshooting
 
