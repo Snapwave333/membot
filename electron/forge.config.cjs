@@ -2,8 +2,15 @@ const path = require('path');
 
 module.exports = {
   packagerConfig: {
+    // Pack the JavaScript app as asar, but ship Python sources and requirements
     asar: true,
     icon: path.resolve(__dirname, 'assets/icon'),
+    // Include Python source tree and requirements in the installed resources folder
+    extraResource: [
+      path.resolve(__dirname, '..', 'src'),
+      path.resolve(__dirname, '..', 'requirements.txt')
+    ],
+    out: path.resolve(__dirname, 'build')
   },
   rebuildConfig: {},
   makers: [
@@ -11,6 +18,8 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         name: 'NeoMemeMarkets',
+        authors: 'Snapwave333',
+        description: 'NeoMeme Markets - Meme-coin trading desktop app (Electron + PySide6)',
         setupExe: 'NeoMemeMarkets-Setup.exe',
         setupIcon: path.resolve(__dirname, 'assets/icon.ico'),
         iconUrl: 'https://example.com/icon.ico',

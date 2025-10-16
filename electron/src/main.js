@@ -1,19 +1,102 @@
-const { app, BrowserWindow, shell } = require('electron');
+const { app, BrowserWindow, shell, dialog } = require('electron');
 const path = require('path');
-const { spawn } = require('child_process');
+const fs = require('fs');
+const { spawn, spawnSync } = require('child_process');
 const isDev = process.env.NODE_ENV !== 'production';
 let pythonProc = null;
 
-function launchPython() {
-  const projectRoot = path.resolve(__dirname, '..', '..');
-  const venvPython = path.join(projectRoot, 'venv', 'Scripts', 'python.exe');
-  const script = path.join(projectRoot, 'src', 'gui', 'main_window.py');
+function exists(p) {
+  try { return fs.existsSync(p); } catch { return false; }
+}
 
-  const env = { ...process.env, PYTHONPATH: projectRoot };
-  pythonProc = spawn(venvPython, [script], { cwd: projectRoot, env, stdio: 'inherit' });
-  pythonProc.on('close', (code) => {
-    pythonProc = null;
+function which(cmd) {
+  const res = spawnSync(process.platform === 'win32' ? 'where' : 'which', [cmd], { encoding: 'utf8' });
+  if (res.status === 0 && res.stdout) {
+    const line = res.stdout.split(/\r?\n/).filter(Boolean)[0];
+    return line;
+  }
+  return null;
+}
+
+function run(cmd, args, opts = {}) {
+  return new Promise((resolve, reject) => {
+    const p = spawn(cmd, args, { stdio: 'inherit', ...opts });
+    p.on('error', reject);
+    p.on('close', (code) => code === 0 ? resolve() : reject(new Error(`${cmd} exited with code ${code}`)));
   });
+}
+
+async function bootstrapVenv(resourcesPath) {
+  const venvDir = path.join(resourcesPath, 'venv');
+  const venvPython = path.join(venvDir, 'Scripts', 'python.exe');
+  if (exists(venvPython)) return venvPython;
+
+  // Try to find a system Python (py launcher preferred on Windows)
+  let pyLauncher = which('py');
+  let sysPython = which('python');
+  const createArgs = ['-m', 'venv', venvDir];
+  try {
+    if (process.platform === 'win32' && pyLauncher) {
+      await run(pyLauncher, ['-3', ...createArgs]);
+    } else if (sysPython) {
+      await run(sysPython, createArgs);
+    } else {
+      throw new Error('Python not found in PATH. Please install Python 3.x');
+    }
+  } catch (e) {
+    dialog.showErrorBox('Python Setup Failed', `${e.message}`);
+    throw e;
+  }
+
+  // Install requirements into the newly created venv
+  const reqPath = path.join(resourcesPath, 'requirements.txt');
+  if (exists(reqPath)) {
+    try {
+      await run(venvPython, ['-m', 'pip', 'install', '--upgrade', 'pip']);
+      await run(venvPython, ['-m', 'pip', 'install', '-r', reqPath]);
+    } catch (e) {
+      dialog.showErrorBox('Dependency Installation Failed', `Failed to install requirements from ${reqPath}. Error: ${e.message}`);
+      throw e;
+    }
+  } else {
+    dialog.showMessageBox({ type: 'warning', title: 'Requirements Missing', message: 'requirements.txt was not found in resources. The GUI may fail if dependencies are missing.' });
+  }
+
+  return venvPython;
+}
+
+async function launchPython() {
+  const resourcesPath = isDev ? path.resolve(__dirname, '..', '..') : process.resourcesPath;
+  const script = isDev
+    ? path.join(resourcesPath, 'src', 'gui', 'main_window.py')
+    : path.join(resourcesPath, 'src', 'gui', 'main_window.py'); // shipped via extraResource
+
+  let pythonExe = isDev
+    ? path.join(resourcesPath, 'venv', 'Scripts', 'python.exe')
+    : path.join(resourcesPath, 'venv', 'Scripts', 'python.exe');
+
+  // If packaged and venv is missing, bootstrap it
+  if (!exists(pythonExe)) {
+    try {
+      pythonExe = await bootstrapVenv(resourcesPath);
+    } catch (e) {
+      // fallback to system python if available
+      const sysPy = which('python') || which('py');
+      if (!sysPy) throw e;
+      pythonExe = sysPy;
+    }
+  }
+
+  const env = { ...process.env, PYTHONPATH: resourcesPath };
+  try {
+    pythonProc = spawn(pythonExe, [script], { cwd: resourcesPath, env, stdio: 'inherit' });
+    pythonProc.on('close', () => { pythonProc = null; });
+    pythonProc.on('error', (err) => {
+      dialog.showErrorBox('Launch Error', `Failed to start Python GUI. ${err.message}`);
+    });
+  } catch (err) {
+    dialog.showErrorBox('Launch Error', `Failed to spawn Python at ${pythonExe}. ${err.message}`);
+  }
 }
 
 function createWindow() {
@@ -31,8 +114,8 @@ function createWindow() {
   win.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(html));
 }
 
-app.whenReady().then(() => {
-  launchPython();
+app.whenReady().then(async () => {
+  await launchPython();
   createWindow();
 });
 
