@@ -5,7 +5,7 @@ nav_order: 1
 ---
 # NeoMeme Markets — Comprehensive User Manual and Tutorial
 
-![NeoMeme Markets Banner](assets/branding/neomeme-banner.png)
+![NeoMeme Markets Logo](../assets/sprites/logo_main.png)
 
 This manual synthesizes existing project documentation into a single, cohesive guide. It is derived solely from: README.md, PROJECT_SUMMARY.md, CHANGELOG.md, DEPLOYMENT.md, SOLANAINTEGRATION.md, and KRAKENCOMPLIANCE.md.
 

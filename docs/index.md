@@ -5,7 +5,7 @@ title: NeoMeme Markets Documentation
 
 # NeoMeme Markets Documentation
 
-![Banner](../assets/branding/neomeme-banner.png)
+![Logo](../assets/sprites/logo_main.png)
 
 Welcome to the NeoMeme Markets documentation site. This site contains the comprehensive User Manual, setup guidance, and reference materials.
 

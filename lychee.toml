@@ -5,6 +5,7 @@ timeout = "20s"
 exclude = [
   "^mailto:",
   "github-readme-stats.vercel.app",
+  "capsule-render.vercel.app",
   "raw.githubusercontent.com/.*/output/github-contribution-grid-snake.svg",
 ]
 # Accept localhost links (not used, but safe)
