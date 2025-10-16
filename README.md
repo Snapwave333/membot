@@ -1,5 +1,7 @@
 [![Docs](https://img.shields.io/badge/Docs-GitHub%20Pages-blue?logo=github)](https://snapwave333.github.io/membot/)
 
+[Quick Start: Idiot's Guide — Day One Profit Strategy](IDIOTS_GUIDE.md)
+
 # NeoMeme Markets — Autonomous Hardened Meme‑Coin Trading Bot
 
 <p align="center">
