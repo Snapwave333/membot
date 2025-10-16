@@ -1,0 +1,29 @@
+name: Docs Link Check
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - 'USER_MANUAL.md'
+      - 'CHANGELOG.md'
+      - 'DEPLOYMENT.md'
+      - 'SOLANAINTEGRATION.md'
+      - 'KRAKENCOMPLIANCE.md'
+      - 'PROJECT_SUMMARY.md'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v1.8.0
+        with:
+          # Check docs and key markdown files. Use config to exclude known rate-limited endpoints
+          args: --verbose --no-progress --timeout 20 --max-concurrency 6 --config lychee.toml "docs/**/*.md" "README.md" "USER_MANUAL.md" "CHANGELOG.md" "DEPLOYMENT.md" "SOLANAINTEGRATION.md" "KRAKENCOMPLIANCE.md" "PROJECT_SUMMARY.md"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

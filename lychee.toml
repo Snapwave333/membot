@@ -1,0 +1,11 @@
+verbose = true
+max_concurrency = 6
+timeout = "20s"
+# Exclude known flaky or rate-limited endpoints
+exclude = [
+  "^mailto:",
+  "github-readme-stats.vercel.app",
+  "raw.githubusercontent.com/.*/output/github-contribution-grid-snake.svg",
+]
+# Accept localhost links (not used, but safe)
+accept = ["200..399"]

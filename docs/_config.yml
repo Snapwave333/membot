@@ -3,5 +3,9 @@ description: Comprehensive User Manual and Documentation
 # Use a built-in GitHub Pages theme
 theme: jekyll-theme-cayman
 markdown: kramdown
-# Disable non-whitelisted plugins for GitHub Pages
-plugins: []
+# Enable whitelisted plugins for GitHub Pages
+plugins:
+  - jekyll-sitemap
+# Site URL for absolute links
+url: https://snapwave333.github.io/membot
+baseurl: /membot
