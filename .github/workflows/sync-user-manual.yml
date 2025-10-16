@@ -1,0 +1,32 @@
+name: Sync docs/user-manual from root USER_MANUAL
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'USER_MANUAL.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Copy USER_MANUAL.md into docs/user-manual.md with front matter
+        run: |
+          mkdir -p docs
+          echo '---' > docs/user-manual.md
+          echo 'layout: default' >> docs/user-manual.md
+          echo 'title: User Manual' >> docs/user-manual.md
+          echo 'nav_order: 1' >> docs/user-manual.md
+          echo '---' >> docs/user-manual.md
+          cat USER_MANUAL.md >> docs/user-manual.md
+      - name: Commit synced manual
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Docs: Sync docs/user-manual.md from root USER_MANUAL.md"
+          file_pattern: docs/user-manual.md

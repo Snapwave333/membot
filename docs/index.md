@@ -21,11 +21,12 @@ Welcome to the NeoMeme Markets documentation site. This site contains the compre
   python main.py --paper-mode
   ```
 
-## Contents
-- User Manual (this site): [./user-manual.html](./user-manual.html)
-- CHANGELOG: https://github.com/Snapwave333/membot/blob/main/CHANGELOG.md
-- README: https://github.com/Snapwave333/membot/blob/main/README.md
+## Sections
+- [User Manual](./user-manual.html)
+- [Troubleshooting Index](./troubleshooting.html)
+- [Diagrams](./diagrams.html)
+- [CHANGELOG](https://github.com/Snapwave333/membot/blob/main/CHANGELOG.md)
+- [README](https://github.com/Snapwave333/membot/blob/main/README.md)
 
 ## Architecture Diagram
 ![System Architecture](./assets/architecture.svg)
-
