@@ -18,6 +18,30 @@ function which(cmd) {
   return null;
 }
 
+function detectPyVersions() {
+  // Returns map like { '3.13t': 'C:\\Program Files\\Python313\\python3.13t.exe', '3.13': '...python.exe', '3.11': '...python.exe' }
+  const versions = {};
+  if (process.platform !== 'win32') return versions;
+  const r = spawnSync('py', ['-0p'], { encoding: 'utf8' });
+  if (r.status !== 0 || !r.stdout) return versions;
+  const lines = r.stdout.split(/\r?\n/).filter(Boolean);
+  lines.forEach(line => {
+    const m = line.match(/-V:(\S+)\s+(.*python[^\s]*\.exe)/i);
+    if (m) versions[m[1]] = m[2];
+  });
+  return versions;
+}
+
+function choosePythonLauncherArg() {
+  // Prefer 3.12 or 3.11 over 3.13t to avoid CFFI incompatibility
+  if (process.platform !== 'win32') return null;
+  const versions = detectPyVersions();
+  if (versions['3.12']) return '-3.12';
+  if (versions['3.11']) return '-3.11';
+  // Fall back to default 3.x
+  return '-3';
+}
+
 function run(cmd, args, opts = {}) {
   return new Promise((resolve, reject) => {
     const p = spawn(cmd, args, { stdio: 'inherit', ...opts });
@@ -37,7 +61,8 @@ async function bootstrapVenv(resourcesPath) {
   const createArgs = ['-m', 'venv', venvDir];
   try {
     if (process.platform === 'win32' && pyLauncher) {
-      await run(pyLauncher, ['-3', ...createArgs]);
+      const arg = choosePythonLauncherArg();
+      await run(pyLauncher, [arg, ...createArgs]);
     } else if (sysPython) {
       await run(sysPython, createArgs);
     } else {
