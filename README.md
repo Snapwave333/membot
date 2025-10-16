@@ -312,7 +312,7 @@ docker build -t meme-bot .
 Snake contribution graph:
 
 <p>
-  <img alt="GitHub Snake" src="https://github.com/Snapwave333/membot/blob/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/Snapwave333/membot/output/github-contribution-grid-snake.svg" />
 </p>
 
 Note: If the snake image is 404 initially, run the "Generate Datas" workflow once from the Actions tab.
