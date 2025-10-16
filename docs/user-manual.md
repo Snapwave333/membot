@@ -5,7 +5,7 @@ title: User Manual
 
 # NeoMeme Markets — Comprehensive User Manual and Tutorial
 
-![NeoMeme Markets Logo](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/logo_main.png)
+![NeoMeme Markets Banner](../assets/branding/neomeme-banner.png)
 
 <details>
 <summary><strong>Quick Navigation — Collapsible Table of Contents</strong></summary>

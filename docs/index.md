@@ -5,7 +5,7 @@ title: NeoMeme Markets Documentation
 
 # NeoMeme Markets Documentation
 
-![Logo](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/logo_main.png)
+![Banner](../assets/branding/neomeme-banner.png)
 
 Welcome to the NeoMeme Markets documentation site. This site contains the comprehensive User Manual, setup guidance, and reference materials.
 

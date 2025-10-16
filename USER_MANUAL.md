@@ -1,6 +1,6 @@
 # NeoMeme Markets — Comprehensive User Manual and Tutorial
 
-![NeoMeme Markets Logo](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/logo_main.png)
+![NeoMeme Markets Banner](assets/branding/neomeme-banner.png)
 
 This manual synthesizes existing project documentation into a single, cohesive guide. It is derived solely from: README.md, PROJECT_SUMMARY.md, CHANGELOG.md, DEPLOYMENT.md, SOLANAINTEGRATION.md, and KRAKENCOMPLIANCE.md.
 
@@ -134,7 +134,7 @@ Source: CHANGELOG.md, README.md
 
 ## Chapter 2: Initial Setup and Installation
 
-![Bot States](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/avatar_bot_happy.png)
+![Bot States](assets/sprites/avatar_bot_happy.png)
 
 ### 2.1 Prerequisites
 - Python 3.11+ installed (recommend 3.12 or 3.11).
@@ -369,7 +369,7 @@ Source: DEPLOYMENT.md
 
 ### 4.1 Wallet Management (Solana)
 
-![Sentiment Icons](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/icon_sentiment_up.png)
+![Sentiment Icons](assets/sprites/icon_sentiment_up.png)
 
 #### 4.1.1 Encrypted Keypair Generation and Storage
 - Generate new Solana keypair using solana‑py.
@@ -467,7 +467,7 @@ Source: SOLANAINTEGRATION.md
 
 ## Chapter 6: Architecture Overview
 
-![System Architecture](https://raw.githubusercontent.com/Snapwave333/membot/main/docs/assets/architecture.svg)
+![System Architecture](docs/assets/architecture.svg)
 
 ### 6.1 Project Structure
 High‑level layout:
