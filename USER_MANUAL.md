@@ -1,87 +1,90 @@
 # NeoMeme Markets — Comprehensive User Manual and Tutorial
 
+![NeoMeme Markets Logo](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/logo_main.png)
+
 This manual synthesizes existing project documentation into a single, cohesive guide. It is derived solely from: README.md, PROJECT_SUMMARY.md, CHANGELOG.md, DEPLOYMENT.md, SOLANAINTEGRATION.md, and KRAKENCOMPLIANCE.md.
 
------
+<details>
+<summary><strong>Quick Navigation — Collapsible Table of Contents</strong></summary>
 
-## Part 1: Table of Contents
+- [Chapter 1: Project Overview](#chapter-1-project-overview)
+  - [1.1 Purpose and Vision](#11-purpose-and-vision)
+  - [1.2 Key Features](#12-key-features)
+    - [1.2.1 Security & Safety](#121-security--safety)
+    - [1.2.2 Intelligent Trading](#122-intelligent-trading)
+    - [1.2.3 User Interface](#123-user-interface)
+    - [1.2.4 Data & Persistence](#124-data--persistence)
+  - [1.3 Recent Changes](#13-recent-changes)
 
-- Chapter 1: Project Overview
-  - 1.1 Purpose and Vision
-  - 1.2 Key Features
-    - 1.2.1 Security & Safety
-    - 1.2.2 Intelligent Trading
-    - 1.2.3 User Interface
-    - 1.2.4 Data & Persistence
-  - 1.3 Recent Changes
+- [Chapter 2: Initial Setup and Installation](#chapter-2-initial-setup-and-installation)
+  - [2.1 Prerequisites](#21-prerequisites)
+  - [2.2 Create a Virtual Environment](#22-create-a-virtual-environment)
+  - [2.3 Install Dependencies](#23-install-dependencies)
+  - [2.4 Configure Environment Variables](#24-configure-environment-variables)
+  - [2.5 Run the Paper Mode Demo](#25-run-the-paper-mode-demo)
+  - [2.6 Windows Desktop Wrapper (Electron Forge)](#26-windows-desktop-wrapper-electron-forge)
+  - [2.7 Troubleshooting](#27-troubleshooting)
+    - [2.7.1 Python Version Guidance](#271-python-version-guidance)
+    - [2.7.2 Electron Launcher ENOENT](#272-electron-launcher-enoent)
+    - [2.7.3 Dependency Pins](#273-dependency-pins)
+    - [2.7.4 OneDrive Build Issues](#274-onedrive-build-issues)
 
-- Chapter 2: Initial Setup and Installation
-  - 2.1 Prerequisites
-  - 2.2 Create a Virtual Environment
-  - 2.3 Install Dependencies
-  - 2.4 Configure Environment Variables
-  - 2.5 Run the Paper Mode Demo
-  - 2.6 Windows Desktop Wrapper (Electron Forge)
-  - 2.7 Troubleshooting
-    - 2.7.1 Python Version Guidance
-    - 2.7.2 Electron Launcher ENOENT
-    - 2.7.3 Dependency Pins
-    - 2.7.4 OneDrive Build Issues
+- [Chapter 3: Deployment and Configuration](#chapter-3-deployment-and-configuration)
+  - [3.1 Pre‑Deployment Checklist](#31-pre-deployment-checklist)
+  - [3.2 Security Configuration](#32-security-configuration)
+  - [3.3 Network Configuration](#33-network-configuration)
+  - [3.4 Database Setup](#34-database-setup)
+  - [3.5 Monitoring & Alerting](#35-monitoring--alerting)
+  - [3.6 Deployment Steps](#36-deployment-steps)
+  - [3.7 Docker Deployment](#37-docker-deployment)
+  - [3.8 Emergency Procedures](#38-emergency-procedures)
+  - [3.9 Risk Management](#39-risk-management)
+  - [3.10 Security Best Practices](#310-security-best-practices)
+  - [3.11 Compliance and Legal](#311-compliance-and-legal)
 
-- Chapter 3: Deployment and Configuration
-  - 3.1 Pre‑Deployment Checklist
-  - 3.2 Security Configuration
-  - 3.3 Network Configuration
-  - 3.4 Database Setup
-  - 3.5 Monitoring & Alerting
-  - 3.6 Deployment Steps
-  - 3.7 Docker Deployment
-  - 3.8 Emergency Procedures
-  - 3.9 Risk Management
-  - 3.10 Security Best Practices
-  - 3.11 Compliance and Legal
+- [Chapter 4: Core Functionality Walkthrough](#chapter-4-core-functionality-walkthrough)
+  - [4.1 Wallet Management (Solana)](#41-wallet-management-solana)
+    - [4.1.1 Encrypted Keypair Generation and Storage](#411-encrypted-keypair-generation-and-storage)
+    - [4.1.2 Decryption and Validation](#412-decryption-and-validation)
+    - [4.1.3 Deposit and Withdraw](#413-deposit-and-withdraw)
+  - [4.2 Market Modes](#42-market-modes)
+    - [4.2.1 Simulation (Paper Mode)](#421-simulation-paper-mode)
+    - [4.2.2 Live Mode](#422-live-mode)
+  - [4.3 Kraken Compliance Layer](#43-kraken-compliance-layer)
+    - [4.3.1 Principles](#431-principles)
+    - [4.3.2 EVM Contract Checks](#432-evm-contract-checks)
+    - [4.3.3 Solana Contract Checks](#433-solana-contract-checks)
+    - [4.3.4 Social Verification](#434-social-verification)
+    - [4.3.5 Compliance Scoring and Hard Veto](#435-compliance-scoring-and-hard-veto)
 
-- Chapter 4: Core Functionality Walkthrough
-  - 4.1 Wallet Management (Solana)
-    - 4.1.1 Encrypted Keypair Generation and Storage
-    - 4.1.2 Decryption and Validation
-    - 4.1.3 Deposit and Withdraw
-  - 4.2 Market Modes
-    - 4.2.1 Simulation (Paper Mode)
-    - 4.2.2 Live Mode
-  - 4.3 Kraken Compliance Layer
-    - 4.3.1 Principles
-    - 4.3.2 EVM Contract Checks
-    - 4.3.3 Solana Contract Checks
-    - 4.3.4 Social Verification
-    - 4.3.5 Compliance Scoring and Hard Veto
+- [Chapter 5: Advanced Topics and Performance](#chapter-5-advanced-topics-and-performance)
+  - [5.1 Security Features](#51-security-features)
+    - [5.1.1 Fail‑Closed Defaults](#511-fail-closed-defaults)
+    - [5.1.2 Audit Trails](#512-audit-trails)
+    - [5.1.3 Kill‑Switch](#513-kill-switch)
+  - [5.2 Solana Optimizations](#52-solana-optimizations)
+    - [5.2.1 Compute Budget](#521-compute-budget)
+    - [5.2.2 Priority Fees](#522-priority-fees)
+    - [5.2.3 Blockhash and Transaction Handling](#523-blockhash-and-transaction-handling)
+  - [5.3 Monitoring and Performance Metrics](#53-monitoring-and-performance-metrics)
 
-- Chapter 5: Advanced Topics and Performance
-  - 5.1 Security Features
-    - 5.1.1 Fail‑Closed Defaults
-    - 5.1.2 Audit Trails
-    - 5.1.3 Kill‑Switch
-  - 5.2 Solana Optimizations
-    - 5.2.1 Compute Budget
-    - 5.2.2 Priority Fees
-    - 5.2.3 Blockhash and Transaction Handling
-  - 5.3 Monitoring and Performance Metrics
+- [Chapter 6: Architecture Overview](#chapter-6-architecture-overview)
+  - [6.1 Project Structure](#61-project-structure)
+  - [6.2 Tech Stack](#62-tech-stack)
+  - [6.3 Environment Variables](#63-environment-variables)
 
-- Chapter 6: Architecture Overview
-  - 6.1 Project Structure
-  - 6.2 Tech Stack
-  - 6.3 Environment Variables
+- [Chapter 7: Testing](#chapter-7-testing)
+  - [7.1 Unit Tests](#71-unit-tests)
+  - [7.2 Integration Tests](#72-integration-tests)
+  - [7.3 Paper Mode Testing](#73-paper-mode-testing)
 
-- Chapter 7: Testing
-  - 7.1 Unit Tests
-  - 7.2 Integration Tests
-  - 7.3 Paper Mode Testing
+- [Chapter 8: Contributing and Roadmap](#chapter-8-contributing-and-roadmap)
+  - [8.1 Contribution Guidelines](#81-contribution-guidelines)
+  - [8.2 Roadmap](#82-roadmap)
 
-- Chapter 8: Contributing and Roadmap
-  - 8.1 Contribution Guidelines
-  - 8.2 Roadmap
+- [Appendix A: Detailed Index](#appendix-a-detailed-index)
 
-- Appendix A: Detailed Index
+</details>
 
 -----
 
@@ -130,6 +133,8 @@ Source: CHANGELOG.md, README.md
 -----
 
 ## Chapter 2: Initial Setup and Installation
+
+![Bot States](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/avatar_bot_happy.png)
 
 ### 2.1 Prerequisites
 - Python 3.11+ installed (recommend 3.12 or 3.11).
@@ -364,6 +369,8 @@ Source: DEPLOYMENT.md
 
 ### 4.1 Wallet Management (Solana)
 
+![Sentiment Icons](https://raw.githubusercontent.com/Snapwave333/membot/main/assets/sprites/icon_sentiment_up.png)
+
 #### 4.1.1 Encrypted Keypair Generation and Storage
 - Generate new Solana keypair using solana‑py.
 - Serialize keypair to bytes.
@@ -459,6 +466,8 @@ Source: SOLANAINTEGRATION.md
 -----
 
 ## Chapter 6: Architecture Overview
+
+![System Architecture](https://raw.githubusercontent.com/Snapwave333/membot/main/docs/assets/architecture.svg)
 
 ### 6.1 Project Structure
 High‑level layout:
@@ -567,39 +576,19 @@ Source: README.md
 - Freeze Authority – SOLANAINTEGRATION.md (Token checks)
 - GitHub Snake – README.md (CI workflow)
 - Holder Distribution – KRAKENCOMPLIANCE.md
-- Honeypot Behavior – SOLANAINTEGRATION.md (Swap simulation)
-- Jupiter Aggregator – README.md; SOLANAINTEGRATION.md
-- Kill‑Switch – DEPLOYMENT.md (Emergency procedures)
-- Kraken Audit Layer – KRAKENCOMPLIANCE.md
-- Liquidity Lock – KRAKENCOMPLIANCE.md (EVM); SOLANAINTEGRATION.md (Solana pools)
-- LP Token Lock – KRAKENCOMPLIANCE.md
-- Machine Learning (ML) – PROJECT_SUMMARY.md (Layered brain)
-- Market Modes (Simulation/Live) – README.md
-- Mint Authority – SOLANAINTEGRATION.md; KRAKENCOMPLIANCE.md
-- Notification Tokens – DEPLOYMENT.md (Security configuration)
-- OneDrive Build Issues (EBUSY) – CHANGELOG.md; README.md
-- Orca – README.md; SOLANAINTEGRATION.md
-- Paper Mode – README.md; PROJECT_SUMMARY.md; DEPLOYMENT.md
-- Priority Fees – SOLANAINTEGRATION.md
-- PySide6 (Qt) – README.md; PROJECT_SUMMARY.md
-- Recent Changes – README.md; CHANGELOG.md
-- Regulatory Compliance – DEPLOYMENT.md
-- Risk Management – PROJECT_SUMMARY.md; DEPLOYMENT.md
+- Honeypot Behavior – SOLANAINTEGRATION.md; KRAKENCOMPLIANCE.md
+- Kill‑Switch – DEPLOYMENT.md; PROJECT_SUMMARY.md
+- Liquidity – KRAKENCOMPLIANCE.md
+- Machine Learning – README.md (Layered brain)
+- Mempool – README.md (WSMEMPOOLPRIMARY)
+- Mint Authority – SOLANAINTEGRATION.md (Token checks)
+- Paper Mode – README.md; DEPLOYMENT.md
+- Priority Fees – SOLANAINTEGRATION.md (Optimization)
+- PySide6 GUI – README.md
+- Risk Management – README.md; DEPLOYMENT.md
 - Router Compatibility – KRAKENCOMPLIANCE.md
-- RPC Endpoints – README.md; DEPLOYMENT.md; SOLANAINTEGRATION.md
-- Raydium – README.md; SOLANAINTEGRATION.md
-- Security Events – DEPLOYMENT.md
-- Serum – README.md; SOLANAINTEGRATION.md
-- Simulation (Paper Mode) – README.md; DEPLOYMENT.md
-- Social Verification – KRAKENCOMPLIANCE.md
-- Solana – README.md; SOLANAINTEGRATION.md
-- SPL Token Program – SOLANAINTEGRATION.md
-- Telegram Signals – README.md; KRAKENCOMPLIANCE.md (verification)
-- Trading Audit Trail – PROJECT_SUMMARY.md; DEPLOYMENT.md
-- Wallet Encryption – PROJECT_SUMMARY.md; SOLANAINTEGRATION.md
-- WebSockets – README.md (Tech highlights)
-- Windows Installer – README.md; CHANGELOG.md (Python version preference)
+- SQLAlchemy – PROJECT_SUMMARY.md; DEPLOYMENT.md
+- Squirrel (Windows Installer) – README.md (Electron Forge)
+- Telemetry/Monitoring – SOLANAINTEGRATION.md
+- Wallet Encryption – SOLANAINTEGRATION.md; PROJECT_SUMMARY.md
 
------
-
-MIT License – see LICENSE.

@@ -1,0 +1,7 @@
+title: NeoMeme Markets Docs
+description: Comprehensive User Manual and Documentation
+# Use a built-in GitHub Pages theme
+theme: jekyll-theme-cayman
+markdown: kramdown
+# Disable non-whitelisted plugins for GitHub Pages
+plugins: []
