@@ -34,9 +34,6 @@
 
 NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail‑closed security defaults, comprehensive safety controls, Kraken compliance layer, Solana integration, and Telegram signal processing. It features a layered brain that combines rules-based logic with machine learning, and a minimal desktop wrapper for Windows built with Electron Forge.
 
-<p align="center">
-  <img src="assets/sprites/logo_main.png" alt="NeoMeme Markets Logo" width="360" />
-</p>
 
 ## Table of Contents
 
