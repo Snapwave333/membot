@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": 1760255147.6421702,
+    "token_address": "0x1234567890123456789012345678901234567890",
+    "chain": "ethereum",
+    "event_type": "token_discovered",
+    "source": "market_watcher"
+  },
+  {
+    "timestamp": 1760255148.643019,
+    "token_address": "0x0987654321098765432109876543210987654321",
+    "chain": "ethereum",
+    "event_type": "token_discovered",
+    "source": "market_watcher"
+  },
+  {
+    "timestamp": 1760255149.6442523,
+    "token_address": "So11111111111111111111111111111111111111112",
+    "chain": "solana",
+    "event_type": "token_discovered",
+    "source": "market_watcher"
+  },
+  {
+    "timestamp": 1760255150.6449769,
+    "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "chain": "solana",
+    "event_type": "token_discovered",
+    "source": "market_watcher"
+  }
+]

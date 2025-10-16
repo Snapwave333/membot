@@ -1,0 +1,162 @@
+{
+  "start_time": 1760255147.5928197,
+  "end_time": 1760255267.5928197,
+  "duration_minutes": 2,
+  "components": {
+    "database": "initialized",
+    "rpc_connector": "initialized",
+    "solana_rpc_connector": "unavailable",
+    "evm_market_watcher": "initialized",
+    "solana_market_watcher": "initialized",
+    "kraken_audit_layer": "initialized",
+    "telegram_listener": "unavailable",
+    "strategy": "initialized",
+    "exchange": "initialized",
+    "risk_manager": "initialized",
+    "rules_engine": "initialized",
+    "ml_engine": "initialized",
+    "scheduler": "initialized"
+  },
+  "events": [
+    {
+      "timestamp": 1760255147.6421702,
+      "token_address": "0x1234567890123456789012345678901234567890",
+      "chain": "ethereum",
+      "event_type": "token_discovered",
+      "source": "market_watcher"
+    },
+    {
+      "timestamp": 1760255148.643019,
+      "token_address": "0x0987654321098765432109876543210987654321",
+      "chain": "ethereum",
+      "event_type": "token_discovered",
+      "source": "market_watcher"
+    },
+    {
+      "timestamp": 1760255149.6442523,
+      "token_address": "So11111111111111111111111111111111111111112",
+      "chain": "solana",
+      "event_type": "token_discovered",
+      "source": "market_watcher"
+    },
+    {
+      "timestamp": 1760255150.6449769,
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chain": "solana",
+      "event_type": "token_discovered",
+      "source": "market_watcher"
+    }
+  ],
+  "trades": [],
+  "signals": [
+    {
+      "timestamp": 1760255151.6457283,
+      "message_id": "msg_1760255151",
+      "chat_id": "demo_chat",
+      "user_id": "user_001",
+      "username": "crypto_trader_1",
+      "text": "\ud83d\ude80 $PEPE to the moon! Diamond hands! \ud83d\udc8e\ud83d\ude4c",
+      "tokens_mentioned": [
+        "PEPE"
+      ],
+      "signal_strength": "moderate",
+      "astroturf_score": 0.2,
+      "event_type": "telegram_signal"
+    },
+    {
+      "timestamp": 1760255153.6459975,
+      "message_id": "msg_1760255153",
+      "chat_id": "demo_chat",
+      "user_id": "user_002",
+      "username": "moon_boy_99",
+      "text": "Just bought 0x1234567890123456789012345678901234567890 - this is going to pump!",
+      "tokens_mentioned": [
+        "0x1234567890123456789012345678901234567890"
+      ],
+      "signal_strength": "moderate",
+      "astroturf_score": 0.2,
+      "event_type": "telegram_signal"
+    },
+    {
+      "timestamp": 1760255155.6463625,
+      "message_id": "msg_1760255155",
+      "chat_id": "demo_chat",
+      "user_id": "user_003",
+      "username": "solana_whale",
+      "text": "Solana token So11111111111111111111111111111111111111112 is the next big thing!",
+      "tokens_mentioned": [
+        "So11111111111111111111111111111111111111112"
+      ],
+      "signal_strength": "moderate",
+      "astroturf_score": 0.2,
+      "event_type": "telegram_signal"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "timestamp": 1760255157.6486595,
+      "token_address": "0x1234567890123456789012345678901234567890",
+      "chain": "ethereum",
+      "compliance_score": 60.0,
+      "veto_reasons": [
+        "bytecode_suspicious"
+      ],
+      "warnings": [
+        "Bytecode analysis failed: 'coroutine' object has no attribute 'make_request'"
+      ],
+      "is_compliant": false,
+      "event_type": "compliance_check"
+    },
+    {
+      "timestamp": 1760255158.6508183,
+      "token_address": "0x0987654321098765432109876543210987654321",
+      "chain": "ethereum",
+      "compliance_score": 60.0,
+      "veto_reasons": [
+        "bytecode_suspicious"
+      ],
+      "warnings": [
+        "Bytecode analysis failed: 'coroutine' object has no attribute 'make_request'"
+      ],
+      "is_compliant": false,
+      "event_type": "compliance_check"
+    },
+    {
+      "timestamp": 1760255159.6529589,
+      "token_address": "So11111111111111111111111111111111111111112",
+      "chain": "solana",
+      "compliance_score": 60.0,
+      "veto_reasons": [
+        "mint_authority_active"
+      ],
+      "warnings": [
+        "Token program analysis failed: 'NoneType' object has no attribute 'make_request'"
+      ],
+      "is_compliant": false,
+      "event_type": "compliance_check"
+    },
+    {
+      "timestamp": 1760255160.6557324,
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chain": "solana",
+      "compliance_score": 60.0,
+      "veto_reasons": [
+        "mint_authority_active"
+      ],
+      "warnings": [
+        "Token program analysis failed: 'NoneType' object has no attribute 'make_request'"
+      ],
+      "is_compliant": false,
+      "event_type": "compliance_check"
+    }
+  ],
+  "performance_metrics": {
+    "total_events": 4,
+    "total_signals": 3,
+    "total_compliance_checks": 4,
+    "total_trades": 0,
+    "compliant_tokens": 0,
+    "non_compliant_tokens": 4,
+    "demo_duration": 14.06529426574707
+  }
+}

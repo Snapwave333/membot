@@ -1,0 +1,27 @@
+{
+  "test_summary": {
+    "timestamp": 1760254255.9982185,
+    "paper_mode": true
+  },
+  "results": {
+    "paper_mode_enabled": true,
+    "real_transactions_blocked": true,
+    "key_encryption_verified": false,
+    "file_permissions_secure": false,
+    "no_key_logging": true,
+    "security_controls_active": false,
+    "errors": [
+      "Encrypted key file has incorrect permissions: 666",
+      "File .encrypted_key has insecure permissions: 666",
+      "File src/config.py has insecure permissions: 666",
+      "File .env has insecure permissions: 666",
+      "Security control PROFIT_SWEEP_THRESHOLD is not active"
+    ]
+  },
+  "security_score": {
+    "score": 3,
+    "total": 6,
+    "percentage": 50.0
+  },
+  "security_status": "INSECURE"
+}

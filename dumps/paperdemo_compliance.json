@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": 1760255157.6486595,
+    "token_address": "0x1234567890123456789012345678901234567890",
+    "chain": "ethereum",
+    "compliance_score": 60.0,
+    "veto_reasons": [
+      "bytecode_suspicious"
+    ],
+    "warnings": [
+      "Bytecode analysis failed: 'coroutine' object has no attribute 'make_request'"
+    ],
+    "is_compliant": false,
+    "event_type": "compliance_check"
+  },
+  {
+    "timestamp": 1760255158.6508183,
+    "token_address": "0x0987654321098765432109876543210987654321",
+    "chain": "ethereum",
+    "compliance_score": 60.0,
+    "veto_reasons": [
+      "bytecode_suspicious"
+    ],
+    "warnings": [
+      "Bytecode analysis failed: 'coroutine' object has no attribute 'make_request'"
+    ],
+    "is_compliant": false,
+    "event_type": "compliance_check"
+  },
+  {
+    "timestamp": 1760255159.6529589,
+    "token_address": "So11111111111111111111111111111111111111112",
+    "chain": "solana",
+    "compliance_score": 60.0,
+    "veto_reasons": [
+      "mint_authority_active"
+    ],
+    "warnings": [
+      "Token program analysis failed: 'NoneType' object has no attribute 'make_request'"
+    ],
+    "is_compliant": false,
+    "event_type": "compliance_check"
+  },
+  {
+    "timestamp": 1760255160.6557324,
+    "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "chain": "solana",
+    "compliance_score": 60.0,
+    "veto_reasons": [
+      "mint_authority_active"
+    ],
+    "warnings": [
+      "Token program analysis failed: 'NoneType' object has no attribute 'make_request'"
+    ],
+    "is_compliant": false,
+    "event_type": "compliance_check"
+  }
+]

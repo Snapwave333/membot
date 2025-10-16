@@ -1,0 +1,14 @@
+{
+  "test_summary": {
+    "timestamp": 1760254216.7422464,
+    "paper_mode": true
+  },
+  "results": {
+    "alerts_generated": 1,
+    "alerts_logged": 0,
+    "external_calls_made": 0,
+    "dry_run_mode_active": true,
+    "errors": []
+  },
+  "notifier_status": "SAFE"
+}

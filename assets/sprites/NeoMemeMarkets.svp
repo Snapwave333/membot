@@ -1,0 +1,184 @@
+{
+  "spritePackName": "NeoMemeMarkets",
+  "version": "1.0.3",
+  "author": "NeoMeme Dev Team",
+  "theme": "Professional with vibrant meme-inspired accents",
+  "resolution": "HD",
+  "scaling": {
+    "default": "1x",
+    "supported": ["1x", "2x", "4x"]
+  },
+  "fallback": {
+    "missingSprite": "placeholder.png",
+    "errorSprite": "error_icon.png"
+  },
+  "categories": {
+    "icons": ["buy", "sell", "hold", "sentiment", "themeToggle"],
+    "avatars": ["bot_neutral", "bot_happy", "bot_alert"],
+    "backgrounds": ["main", "card_trade", "popup", "modal"],
+    "buttons": ["primary", "secondary", "toggle", "close"],
+    "effects": ["glow", "pulse", "flash", "fade"],
+    "overlays": ["tooltip", "notification", "status"]
+  },
+  "sprites": [
+    {
+      "id": "logo_main",
+      "description": "Main logo for NeoMeme Markets",
+      "file": "logo_main.png",
+      "dimensions": { "width": 256, "height": 256 },
+      "anchor": "center",
+      "tags": ["branding", "header"]
+    },
+    {
+      "id": "icon_buy",
+      "description": "Buy button icon - glowing teal arrow",
+      "file": "icon_buy.png",
+      "dimensions": { "width": 64, "height": 64 },
+      "anchor": "center",
+      "stateVariants": ["default", "hover", "pressed"],
+      "tags": ["action", "trade"]
+    },
+    {
+      "id": "icon_sell",
+      "description": "Sell button icon - glowing coral arrow",
+      "file": "icon_sell.png",
+      "dimensions": { "width": 64, "height": 64 },
+      "anchor": "center",
+      "stateVariants": ["default", "hover", "pressed"],
+      "tags": ["action", "trade"]
+    },
+    {
+      "id": "icon_hold",
+      "description": "Hold button icon - golden lock",
+      "file": "icon_hold.png",
+      "dimensions": { "width": 64, "height": 64 },
+      "anchor": "center",
+      "stateVariants": ["default", "hover", "pressed"],
+      "tags": ["action", "trade"]
+    },
+    {
+      "id": "avatar_bot_neutral",
+      "description": "Bot avatar - neutral expression",
+      "file": "avatar_bot_neutral.png",
+      "dimensions": { "width": 128, "height": 128 },
+      "anchor": "bottom",
+      "tags": ["avatar", "status"]
+    },
+    {
+      "id": "avatar_bot_happy",
+      "description": "Bot avatar - happy expression",
+      "file": "avatar_bot_happy.png",
+      "dimensions": { "width": 128, "height": 128 },
+      "anchor": "bottom",
+      "tags": ["avatar", "status"]
+    },
+    {
+      "id": "avatar_bot_alert",
+      "description": "Bot avatar - alert expression",
+      "file": "avatar_bot_alert.png",
+      "dimensions": { "width": 128, "height": 128 },
+      "anchor": "bottom",
+      "tags": ["avatar", "status"]
+    },
+    {
+      "id": "background_main",
+      "description": "Main dashboard background - gradient with geometric overlays",
+      "file": "background_main.jpg",
+      "dimensions": { "width": 1920, "height": 1080 },
+      "anchor": "top-left",
+      "tags": ["background", "dashboard"]
+    },
+    {
+      "id": "card_trade",
+      "description": "Trade card background",
+      "file": "card_trade.png",
+      "dimensions": { "width": 400, "height": 200 },
+      "anchor": "top-left",
+      "tags": ["component", "card"]
+    },
+    {
+      "id": "icon_sentiment_up",
+      "description": "Sentiment indicator - positive",
+      "file": "icon_sentiment_up.png",
+      "dimensions": { "width": 48, "height": 48 },
+      "anchor": "center",
+      "tags": ["sentiment", "indicator"]
+    },
+    {
+      "id": "icon_sentiment_down",
+      "description": "Sentiment indicator - negative",
+      "file": "icon_sentiment_down.png",
+      "dimensions": { "width": 48, "height": 48 },
+      "anchor": "center",
+      "tags": ["sentiment", "indicator"]
+    },
+    {
+      "id": "icon_sentiment_neutral",
+      "description": "Sentiment indicator - neutral",
+      "file": "icon_sentiment_neutral.png",
+      "dimensions": { "width": 48, "height": 48 },
+      "anchor": "center",
+      "tags": ["sentiment", "indicator"]
+    },
+    {
+      "id": "notification_popup",
+      "description": "Toast-style notification background",
+      "file": "notification_popup.png",
+      "dimensions": { "width": 300, "height": 100 },
+      "anchor": "top-right",
+      "tags": ["overlay", "notification"]
+    },
+    {
+      "id": "button_theme_toggle",
+      "description": "Theme toggle button",
+      "file": "button_theme_toggle.png",
+      "dimensions": { "width": 64, "height": 64 },
+      "anchor": "center",
+      "tags": ["button", "settings"]
+    }
+  ],
+  "animations": [
+    {
+      "id": "bot_pulse",
+      "description": "Bot avatar glow pulse",
+      "targetSprite": "avatar_bot_neutral",
+      "type": "pulse",
+      "duration": 1000,
+      "repeat": true,
+      "easing": "ease-in-out",
+      "trigger": "marketVolatility > 0.7"
+    },
+    {
+      "id": "sentiment_flash",
+      "description": "Flash effect on sentiment change",
+      "targetSprite": "icon_sentiment_up",
+      "type": "flash",
+      "duration": 500,
+      "repeat": false,
+      "easing": "linear",
+      "trigger": "sentimentChange"
+    },
+    {
+      "id": "trade_card_fadein",
+      "description": "Fade-in animation for trade cards",
+      "targetSprite": "card_trade",
+      "type": "fade",
+      "duration": 600,
+      "repeat": false,
+      "easing": "ease-out",
+      "trigger": "cardLoad"
+    }
+  ],
+  "accessibility": {
+    "altText": {
+      "logo_main": "NeoMeme Markets logo",
+      "icon_buy": "Buy icon",
+      "icon_sell": "Sell icon",
+      "icon_hold": "Hold icon",
+      "avatar_bot_neutral": "Bot avatar with neutral expression",
+      "background_main": "Dashboard background with gradient and geometric shapes"
+    },
+    "highContrastSupport": true,
+    "screenReaderHints": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "test_summary": {
+    "timestamp": 1760254131.9416742,
+    "paper_mode": true
+  },
+  "results": {
+    "trading_events_logged": 1,
+    "performance_metrics_logged": 0,
+    "database_entries_created": 1,
+    "audit_trail_complete": false,
+    "errors": [
+      "Performance metric logging failed: TimeStamper.__call__() missing 3 required positional arguments: 'logger', 'name', and 'event_dict'",
+      "Trading log is empty"
+    ]
+  },
+  "audit_trail_status": "INCOMPLETE"
+}

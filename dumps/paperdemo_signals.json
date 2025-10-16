@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": 1760255151.6457283,
+    "message_id": "msg_1760255151",
+    "chat_id": "demo_chat",
+    "user_id": "user_001",
+    "username": "crypto_trader_1",
+    "text": "\ud83d\ude80 $PEPE to the moon! Diamond hands! \ud83d\udc8e\ud83d\ude4c",
+    "tokens_mentioned": [
+      "PEPE"
+    ],
+    "signal_strength": "moderate",
+    "astroturf_score": 0.2,
+    "event_type": "telegram_signal"
+  },
+  {
+    "timestamp": 1760255153.6459975,
+    "message_id": "msg_1760255153",
+    "chat_id": "demo_chat",
+    "user_id": "user_002",
+    "username": "moon_boy_99",
+    "text": "Just bought 0x1234567890123456789012345678901234567890 - this is going to pump!",
+    "tokens_mentioned": [
+      "0x1234567890123456789012345678901234567890"
+    ],
+    "signal_strength": "moderate",
+    "astroturf_score": 0.2,
+    "event_type": "telegram_signal"
+  },
+  {
+    "timestamp": 1760255155.6463625,
+    "message_id": "msg_1760255155",
+    "chat_id": "demo_chat",
+    "user_id": "user_003",
+    "username": "solana_whale",
+    "text": "Solana token So11111111111111111111111111111111111111112 is the next big thing!",
+    "tokens_mentioned": [
+      "So11111111111111111111111111111111111111112"
+    ],
+    "signal_strength": "moderate",
+    "astroturf_score": 0.2,
+    "event_type": "telegram_signal"
+  }
+]

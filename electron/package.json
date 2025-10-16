@@ -1,0 +1,30 @@
+{
+  "name": "membot-electron",
+  "productName": "NeoMeme Markets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Windows desktop wrapper for the NeoMeme Markets Python app",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo 'No lint'"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "electron": "^31.3.0"
+  },
+  "config": {
+    "forge": "./forge.config.cjs"
+  }
+}
+

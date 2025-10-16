@@ -1,0 +1,19 @@
+{
+  "test_summary": {
+    "duration_minutes": 2,
+    "start_time": 1760253765.0763445,
+    "end_time": 1760253885.0884044,
+    "paper_mode": true
+  },
+  "results": {
+    "trades_executed": 8,
+    "trades_successful": 8,
+    "total_pnl_usd": -0.18831633686750138,
+    "errors": []
+  },
+  "final_balances": {
+    "eth": 5.0,
+    "usd": 9999.811683663132
+  },
+  "errors": []
+}
