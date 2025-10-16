@@ -31,6 +31,30 @@ NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail�
   <img src="assets/sprites/logo_main.png" alt="NeoMeme Markets Logo" width="360" />
 </p>
 
+## Table of Contents
+
+- [Download](#download)
+- [Releases](#releases)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Desktop App (Windows via Electron Forge)](#desktop-app-windows-via-electron-forge)
+- [Live Mode](#live-mode)
+- [Security](#security)
+- [Recent Changes](#recent-changes)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Environment Variables](#environment-variables)
+- [Development](#development)
+- [Security Considerations](#security-considerations)
+- [Roadmap](#roadmap)
+- [GitHub History 📈](#github-history-)
+- [FAQ](#faq)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 ## Download
 
 - Latest Windows installer (recommended):
@@ -39,6 +63,14 @@ NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail�
 - Portable ZIP: `electron/out/make/zip/win32/x64/NeoMeme Markets-win32-x64-1.0.0.zip` (for advanced users)
 
 Note: The Windows wrapper expects a Python virtual environment to be present with dependencies installed. See Getting Started.
+
+## Releases
+
+- Latest release: https://github.com/Snapwave333/membot/releases/latest
+- v1.0.0 initial release: https://github.com/Snapwave333/membot/releases/tag/v1.0.0
+- v1.0.1 tag: https://github.com/Snapwave333/membot/releases/tag/v1.0.1
+
+Release badges are shown at the top of this README. Full changelog is maintained via commit history and release notes.
 
 ## Features
 
@@ -216,6 +248,23 @@ See also:
 - Deployment Checklist: `DEPLOYMENT.md`
 - Project Overview: `PROJECT_SUMMARY.md`
 
+## Tech Stack
+
+<p>
+  <img alt="Python" title="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="45" />
+  <img alt="Node.js" title="Node.js" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" />
+  <img alt="Electron" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="45" />
+  <img alt="Qt" title="Qt (PySide6)" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" height="45" />
+  <img alt="JavaScript" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="45" />
+  <img alt="Docker" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="45" />
+  <img alt="Git" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="45" />
+  <img alt="GitHub" title="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" />
+  <img alt="Windows" title="Windows" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="45" />
+  <img alt="Linux" title="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="45" />
+</p>
+
+Tech highlights: Python 3.11/3.12, PySide6 (Qt), Electron Forge (Windows wrapper), WebSockets, Solana/EVM tooling, pytest.
+
 ## Environment Variables
 
 See `.env.example` for required configuration variables:
@@ -253,6 +302,21 @@ Build Docker image:
 docker build -t meme-bot .
 ```
 
+## GitHub History 📈
+
+<p>
+  <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=Snapwave333&show_icons=true&theme=tokyonight" height="140" />
+  <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Snapwave333&layout=compact&theme=tokyonight" height="140" />
+</p>
+
+Snake contribution graph:
+
+<p>
+  <img alt="GitHub Snake" src="https://github.com/Snapwave333/membot/blob/output/github-contribution-grid-snake.svg" />
+</p>
+
+Note: If the snake image is 404 initially, run the "Generate Datas" workflow once from the Actions tab.
+
 ## Security Considerations
 
 - Never commit `.env` files or private keys
@@ -281,6 +345,28 @@ docker build -t meme-bot .
   We simplified the initial release to Solana to reduce complexity and improve reliability, replacing the earlier PayPal concept.
 - How do I add a new strategy?  
   Implement it in `src/trading/strategy.py` and register it with the rules/ML engine. Add tests in `tests/`.
+
+## Troubleshooting
+
+- Windows Electron launcher shows "spawn ... python.exe ENOENT":
+  - Ensure a virtual environment exists at `resources/venv` for the installed app or `../venv` during development.
+  - Create venv and install deps:
+    ```powershell
+    # From repo root
+    py -3.12 -m venv venv  # or py -3.11
+    venv\Scripts\pip install --upgrade pip
+    venv\Scripts\pip install -r requirements.txt
+    ```
+  - For installed app v1.0.0, create `AppData\Local\NeoMemeMarkets\app-1.0.0\resources\venv` and install deps similarly.
+
+- Python 3.13 CFFI/package issues:
+  - Use Python 3.12 or 3.11. The launcher prefers these versions.
+
+- Dependency resolution conflicts (solana/solders/websockets):
+  - Recommended pins: `solana==0.32.0`, `solders==0.20.0`, `websockets==11.0`.
+
+- Electron Forge build errors under OneDrive (EBUSY):
+  - Build outside OneDrive, e.g., `C:\membot-build\electron`.
 
 ## Contributing
 
