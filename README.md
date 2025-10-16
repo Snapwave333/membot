@@ -1,24 +1,44 @@
-# Autonomous Hardened Meme-Coin Trading Bot
+# NeoMeme Markets — Autonomous Hardened Meme‑Coin Trading Bot
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?text=NeoMeme%20Markets&animation=fadeIn&type=waving&color=0:00F5D4,100:00B3F0&height=140&fontColor=001018&fontAlignY=35" alt="NeoMeme Markets Banner" />
 </p>
 
 <p align="center">
+  <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/v/release/Snapwave333/membot?style=for-the-badge&label=Release" alt="Latest release" /></a>
+  <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/downloads/Snapwave333/membot/latest/total?style=for-the-badge&label=Downloads" alt="Downloads" /></a>
+  <a href="https://github.com/Snapwave333/membot"><img src="https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&color=ffdd57" alt="Stars" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00D4FF?style=for-the-badge" alt="License" /></a>
   <a href="https://github.com/Snapwave333/membot/actions"><img src="https://img.shields.io/badge/CI-Tests-blue?style=for-the-badge" alt="CI" /></a>
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-0A84FF?style=for-the-badge" alt="Platforms" />
-  <img src="https://img.shields.io/badge/GUI-PySide6-6E40C9?style=for-the-badge" alt="GUI" />
-  <img src="https://img.shields.io/badge/Desktop-Electron%20Forge-14F195?style=for-the-badge&labelColor=0b1220" alt="Electron Forge" />
 </p>
 
 <p align="center">
-  <a href="#quick-start-paper-mode">Quick Start</a> •
-  <a href="#desktop-app-windows-via-electron-forge">Desktop App</a> •
-  <a href="#recent-changes">Recent Changes</a> •
-  <a href="#security-features">Security</a>
+  <a href="#download">Download</a> •
+  <a href="#features">Features</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#desktop-app-windows">Desktop App</a> •
+  <a href="#security">Security</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#roadmap">Roadmap</a> •
+  <a href="#faq">FAQ</a> •
+  <a href="#contributing">Contributing</a>
 </p>
 
-A secure, autonomous trading bot for meme-coins with fail-closed security defaults, comprehensive safety controls, Kraken compliance layer, Solana integration, and Telegram signal processing. Features a layered brain system combining rules-based logic with machine learning.
+NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail‑closed security defaults, comprehensive safety controls, Kraken compliance layer, Solana integration, and Telegram signal processing. It features a layered brain that combines rules-based logic with machine learning, and a minimal desktop wrapper for Windows built with Electron Forge.
+
+<p align="center">
+  <img src="assets/sprites/logo_main.png" alt="NeoMeme Markets Logo" width="360" />
+</p>
+
+## Download
+
+- Latest Windows installer (recommended):
+  - Direct link: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
+  - Specific version: https://github.com/Snapwave333/membot/releases/download/v1.0.0/NeoMemeMarkets-Setup.exe
+- Portable ZIP: `electron/out/make/zip/win32/x64/NeoMeme Markets-win32-x64-1.0.0.zip` (for advanced users)
+
+Note: The Windows wrapper expects a Python virtual environment to be present with dependencies installed. See Getting Started.
 
 ## Features
 
@@ -42,7 +62,7 @@ A secure, autonomous trading bot for meme-coins with fail-closed security defaul
 - **Compute Budget Optimization**: Transaction priority and fee management
 - **Multi-Chain Support**: Simultaneous EVM and Solana operations
 
-### 📱 Telegram Signal Processing
+### 📡 Signal Processing (Telegram)
 - **Real-Time Signal Ingestion**: Telegram Bot API integration
 - **Astroturf Detection**: Bot account identification, fake engagement detection
 - **Multi-Source Corroboration**: Signal validation across platforms
@@ -60,12 +80,27 @@ A secure, autonomous trading bot for meme-coins with fail-closed security defaul
 - **Unit Tests**: Complete test coverage with pytest
 - **PAPER_MODE Demo**: Comprehensive demonstration script
 
-## Quick Start (Paper Mode)
+## Screenshots
+
+<p align="center">
+  <img src="assets/sprites/avatar_bot_happy.png" alt="Bot Happy" width="80" />
+  <img src="assets/sprites/avatar_bot_neutral.png" alt="Bot Neutral" width="80" />
+  <img src="assets/sprites/avatar_bot_alert.png" alt="Bot Alert" width="80" />
+</p>
+
+<details>
+  <summary>Theme & Sprites</summary>
+  <p>NeoMeme Markets includes a sprite system and animations for visual feedback in the GUI, aligned to the "Neo" theme.</p>
+</details>
+
+## Getting Started
+
+### Quick Start (Paper Mode)
 
 1. Clone and setup:
 ```bash
 git clone <repo>
-cd meme-bot
+cd membot
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -94,7 +129,7 @@ python run_paper_demo.py
 python main.py --paper-mode
 ```
 
-## Desktop App (Windows via Electron Forge)
+### Desktop App (Windows via Electron Forge)
 
 Build and run a Windows desktop wrapper that launches the Python GUI.
 
@@ -116,7 +151,16 @@ Notes:
 - The launcher executes `../venv/Scripts/python.exe src/gui/main_window.py` with `PYTHONPATH` set to the repo root.
 - Ensure the Python venv and dependencies are installed before running the installer; alternatively, bundle with PyInstaller and ship the EXE via Forge `extraResources`.
 
-## Security Features
+### Live Mode
+
+To enable live mode trading, review and follow deployment safeguards in `DEPLOYMENT.md` and enable feature flags in your `.env`.
+
+```bash
+python main.py --live-mode
+```
+Ensure you understand all safety controls before enabling live trading.
+
+## Security
 
 - All secrets loaded from `.env` file
 - Encrypted private key storage with secure passphrase
@@ -135,16 +179,17 @@ Notes:
 - Accordion-style collapsible sections and scroll areas
 - Electron Forge Windows installer
 
-## Project Structure
+## Architecture
+
+High-level layout:
 
 ```
-meme-bot/
+NeoMeme-Markets (membot)/
 ├── src/
 │   ├── config.py              # Configuration parameters
 │   ├── security/
 │   │   └── wallet_manager.py  # Encrypted wallet management
-│   ├── data/
-│   │   └── rpc_connector.py   # RPC connection handling
+│   ├── security/contract_checker.py  # Token safety assessment
 │   ├── trading/
 │   │   ├── exchange.py        # Exchange interface
 │   │   ├── strategy.py        # Trading strategies
@@ -158,13 +203,18 @@ meme-bot/
 │       ├── logger.py          # Logging utilities
 │       └── database.py        # Database operations
 ├── tests/                     # Unit tests
-├── docs/                      # Documentation
 ├── .env.example              # Environment template
 ├── requirements.txt          # Python dependencies
 ├── pyproject.toml           # Project configuration
 ├── Dockerfile               # Container configuration
 └── main.py                  # Application entry point
 ```
+
+See also:
+- Kraken Compliance: `KRAKENCOMPLIANCE.md`
+- Solana Integration: `SOLANAINTEGRATION.md`
+- Deployment Checklist: `DEPLOYMENT.md`
+- Project Overview: `PROJECT_SUMMARY.md`
 
 ## Environment Variables
 
@@ -210,6 +260,43 @@ docker build -t meme-bot .
 - Review all security decisions in code comments
 - Follow deployment checklist in `DEPLOYMENT.md`
 - Enable kill-switch before live trading
+
+## Roadmap
+
+- v1.1.x
+  - Enhanced Solana DEX routing and fee optimization
+  - Expanded heuristics for scam detection
+  - Modular strategy packs
+- v1.2.x
+  - Cross-chain bridges and EVM execution safety improvements
+  - GUI workflow enhancements and accessibility
+
+## FAQ
+
+- Is it safe to run live?  
+  The bot is built with fail‑closed defaults, but live trading is inherently risky. Review `DEPLOYMENT.md`, use small allocations, and enable the kill‑switch.
+- Does it support multiple chains?  
+  Yes. Solana is prioritized; EVM support exists for wallet management and compliance checks.
+- Why Solana‑only wallet flow now?  
+  We simplified the initial release to Solana to reduce complexity and improve reliability, replacing the earlier PayPal concept.
+- How do I add a new strategy?  
+  Implement it in `src/trading/strategy.py` and register it with the rules/ML engine. Add tests in `tests/`.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+- Fork the repo and create a feature branch
+- Write tests for new functionality
+- Follow code style and security guidelines
+- Open a PR with a clear description and checklist
+
+## Acknowledgements
+
+- Capsule Render banner
+- Electron Forge for the desktop wrapper
+- PySide6 for the GUI
+- The broader open‑source community and tooling around Solana and EVM
 
 ## License
 
