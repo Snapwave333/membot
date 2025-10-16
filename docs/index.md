@@ -17,7 +17,7 @@ Welcome to the NeoMeme Markets documentation site. This site contains the compre
   cd membot
   python -m venv venv && source venv/bin/activate
   pip install -r requirements.txt
-  cp env.example .env
+  cp .env.example .env
   python main.py --paper-mode
   ```
 
