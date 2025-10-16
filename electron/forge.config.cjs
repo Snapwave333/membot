@@ -8,7 +8,9 @@ module.exports = {
     // Include Python source tree and requirements in the installed resources folder
     extraResource: [
       path.resolve(__dirname, '..', 'src'),
-      path.resolve(__dirname, '..', 'requirements.txt')
+      path.resolve(__dirname, '..', 'requirements.txt'),
+      // Include branding and sprites so splash/logo assets resolve in packaged app
+      path.resolve(__dirname, '..', 'assets')
     ],
     out: path.resolve(__dirname, 'build')
   },

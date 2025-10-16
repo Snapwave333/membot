@@ -1,7 +1,7 @@
 # NeoMeme Markets — Autonomous Hardened Meme‑Coin Trading Bot
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?text=NeoMeme%20Markets&animation=fadeIn&type=waving&color=0:00F5D4,100:00B3F0&height=140&fontColor=001018&fontAlignY=35" alt="NeoMeme Markets Banner" />
+  <img src="assets/branding/neomeme-banner.png" alt="NeoMeme Markets Banner" width="820" />
 </p>
 
 <p align="center">

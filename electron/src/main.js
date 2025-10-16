@@ -2,6 +2,7 @@ const { app, BrowserWindow, shell, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const { spawn, spawnSync } = require('child_process');
+const { pathToFileURL } = require('url');
 const isDev = process.env.NODE_ENV !== 'production';
 let pythonProc = null;
 
@@ -137,9 +138,15 @@ function createWindow() {
   const logDir = path.join(resourcesPath, 'logs');
   try { if (!exists(logDir)) fs.mkdirSync(logDir, { recursive: true }); } catch {}
 
+  // Resolve banner path with safe fallback to existing logo
+  const bannerCandidate = path.join(resourcesPath, 'assets', 'branding', 'neomeme-banner.png');
+  const logoFallback = path.join(resourcesPath, 'assets', 'sprites', 'logo_main.png');
+  const bannerPath = exists(bannerCandidate) ? bannerCandidate : logoFallback;
+  const bannerUrl = pathToFileURL(bannerPath).href;
+
   const html = `<!doctype html><html><head><meta charset="utf-8"/><title>NeoMeme Markets</title>
-  <style>body{font-family:Inter,Segoe UI,Arial;background:#0b1220;color:#eaeef7;margin:0;display:flex;align-items:center;justify-content:center;height:100vh} .card{background:#121a2b;border:1px solid #1f2740;border-radius:12px;padding:24px;max-width:720px;box-shadow:0 10px 30px rgba(0,0,0,.35)} h1{margin:0 0 8px} p{opacity:.8} .btn{margin-top:16px;background:linear-gradient(90deg,#00f5d4,#00b3f0);color:#001018;border:none;border-radius:8px;padding:12px 16px;font-weight:700;cursor:pointer} .sub{font-size:12px;opacity:.65;margin-top:8px}</style>
-  </head><body><div class="card"><h1>NeoMeme Markets</h1><p>Python GUI will launch in a separate window.</p><button class="btn" onclick="openLogs()">Open Logs Folder</button><div class="sub">Close this window to quit the launcher.</div></div>
+  <style>body{font-family:Inter,Segoe UI,Arial;background:#0b1220;color:#eaeef7;margin:0;display:flex;align-items:center;justify-content:center;height:100vh} .card{background:#121a2b;border:1px solid #1f2740;border-radius:12px;padding:24px;max-width:720px;box-shadow:0 10px 30px rgba(0,0,0,.35)} h1{margin:8px 0 8px} p{opacity:.8} .btn{margin-top:16px;background:linear-gradient(90deg,#00f5d4,#00b3f0);color:#001018;border:none;border-radius:8px;padding:12px 16px;font-weight:700;cursor:pointer} .sub{font-size:12px;opacity:.65;margin-top:8px} .logo{display:block;margin:0 auto 8px auto;max-width:100%;width:420px}</style>
+  </head><body><div class="card"><img class="logo" src="${bannerUrl}" alt="NeoMeme Markets"/><h1>NeoMeme Markets</h1><p>Python GUI will launch in a separate window.</p><button class="btn" onclick="openLogs()">Open Logs Folder</button><div class="sub">Close this window to quit the launcher.</div></div>
   <script>function openLogs(){require('electron').shell.openPath('${logDir.replace(/\\/g, '\\\\')}')}</script></body></html>`;
   win.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(html));
 }
