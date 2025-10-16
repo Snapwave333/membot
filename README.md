@@ -10,6 +10,8 @@
   <a href="https://github.com/Snapwave333/membot"><img src="https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&color=ffdd57" alt="Stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00D4FF?style=for-the-badge" alt="License" /></a>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/snake.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/snake.yml/badge.svg?branch=main" alt="Snake CI" /></a>
+  <a href="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml/badge.svg?branch=main" alt="Python Tests" /></a>
+  <a href="https://github.com/Snapwave333/membot/actions/workflows/lint.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/lint.yml/badge.svg?branch=main" alt="Lint & Type Check" /></a>
   <img src="https://img.shields.io/github/last-commit/Snapwave333/membot?style=for-the-badge" alt="Last commit" />
   <a href="https://github.com/Snapwave333/membot/issues"><img src="https://img.shields.io/github/issues/Snapwave333/membot?style=for-the-badge" alt="Open issues" /></a>
   <a href="https://github.com/Snapwave333/membot/pulls"><img src="https://img.shields.io/github/issues-pr/Snapwave333/membot?style=for-the-badge" alt="Open PRs" /></a>
