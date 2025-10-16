@@ -9,7 +9,12 @@
   <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/downloads/Snapwave333/membot/latest/total?style=for-the-badge&label=Downloads" alt="Downloads" /></a>
   <a href="https://github.com/Snapwave333/membot"><img src="https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&color=ffdd57" alt="Stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00D4FF?style=for-the-badge" alt="License" /></a>
-  <a href="https://github.com/Snapwave333/membot/actions"><img src="https://img.shields.io/badge/CI-Tests-blue?style=for-the-badge" alt="CI" /></a>
+  <a href="https://github.com/Snapwave333/membot/actions/workflows/snake.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/snake.yml/badge.svg?branch=main" alt="Snake CI" /></a>
+  <img src="https://img.shields.io/github/last-commit/Snapwave333/membot?style=for-the-badge" alt="Last commit" />
+  <a href="https://github.com/Snapwave333/membot/issues"><img src="https://img.shields.io/github/issues/Snapwave333/membot?style=for-the-badge" alt="Open issues" /></a>
+  <a href="https://github.com/Snapwave333/membot/pulls"><img src="https://img.shields.io/github/issues-pr/Snapwave333/membot?style=for-the-badge" alt="Open PRs" /></a>
+  <img src="https://img.shields.io/github/languages/code-size/Snapwave333/membot?style=for-the-badge" alt="Code size" />
+  <img src="https://img.shields.io/github/repo-size/Snapwave333/membot?style=for-the-badge" alt="Repo size" />
 </p>
 
 <p align="center">
@@ -70,7 +75,7 @@ Note: The Windows wrapper expects a Python virtual environment to be present wit
 - v1.0.0 initial release: https://github.com/Snapwave333/membot/releases/tag/v1.0.0
 - v1.0.1 tag: https://github.com/Snapwave333/membot/releases/tag/v1.0.1
 
-Release badges are shown at the top of this README. Full changelog is maintained via commit history and release notes.
+Release badges are shown at the top of this README. Full changelog is maintained via commit history and release notes. For upcoming versions and templates, see the Releases/ folder in the repo.
 
 ## Features
 

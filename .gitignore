@@ -71,6 +71,10 @@ tmp/
 temp/
 .tmp/
 
+# Local content and build outputs not intended for version control
+Shadows-of-Hollow-Creek/
+electron/out/
+
 # Docker
 .dockerignore
 
