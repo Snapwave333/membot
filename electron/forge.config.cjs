@@ -4,7 +4,7 @@ module.exports = {
   packagerConfig: {
     // Pack the JavaScript app as asar, but ship Python sources and requirements
     asar: true,
-    icon: path.resolve(__dirname, 'assets/icon'),
+    icon: path.resolve(__dirname, 'assets', 'icon.ico'),
     // Include Python source tree and requirements in the installed resources folder
     extraResource: [
       path.resolve(__dirname, '..', 'src'),
@@ -22,7 +22,7 @@ module.exports = {
         description: 'NeoMeme Markets - Meme-coin trading desktop app (Electron + PySide6)',
         setupExe: 'NeoMemeMarkets-Setup.exe',
         setupIcon: path.resolve(__dirname, 'assets/icon.ico'),
-        iconUrl: 'https://example.com/icon.ico',
+        iconUrl: 'https://raw.githubusercontent.com/Snapwave333/membot/main/electron/assets/icon.ico',
         noMsi: true,
       },
     },
