@@ -5,6 +5,7 @@
   
 </p>
 
+<!-- Badge layout: single-row consolidated; monitor Docs Link Check badge -->
 <p align="center">
   <span>Releases &amp; Repo:</span>
   <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/v/release/Snapwave333/membot?style=for-the-badge&label=Release" alt="Latest release" /></a>
