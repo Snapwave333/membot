@@ -33,6 +33,11 @@
   <a href="#contributing">Contributing</a>
 </p>
 
+> Quick Start for First‑Timers
+> - Idiot’s Guide: [IDIOTS_GUIDE.md](IDIOTS_GUIDE.md)
+> - Direct installer: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
+> - Make one tiny live trade, then switch back to Simulation (Paper Mode)
+> - Safety first: use Kill Switch or Emergency Stop anytime
 NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail‑closed security defaults, comprehensive safety controls, Kraken compliance layer, Solana integration, and Telegram signal processing. It features a layered brain that combines rules-based logic with machine learning, and a minimal desktop wrapper for Windows built with Electron Forge.
 
 
@@ -438,3 +443,6 @@ Contributions, issues, and feature requests are welcome!
 ## License
 
 MIT License - see LICENSE file for details.
+
+
+

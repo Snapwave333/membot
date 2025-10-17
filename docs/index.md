@@ -8,6 +8,17 @@ title: NeoMeme Markets Documentation
 ![Logo](../assets/sprites/logo_main.png)
 
 Welcome to the NeoMeme Markets documentation site. This site contains the comprehensive User Manual, setup guidance, and reference materials.
+## Beginner Quick Start (First Trade Today)
+- Download the Windows installer: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
+- Launch the app and set up your wallet (generate/restore passphrase, connect, fund a small amount)
+- Safety net is ON by default: compliance checks run automatically
+- Switch Market Mode to Live
+- Open Discovery and choose a trending token with real volume
+- Set the smallest position size and place a tiny buy
+- Use Kill Switch or Emergency Stop anytime if uncertain
+- After your first trade, switch back to Simulation (Paper Mode) to practice
+
+For a friendly step-by-step, see the Idiot’s Guide: https://github.com/Snapwave333/membot/blob/main/IDIOTS_GUIDE.md
 
 - Read the full [User Manual](./user-manual.html)
 - Idiot's Guide (Day One Profit Strategy): https://github.com/Snapwave333/membot/blob/main/IDIOTS_GUIDE.md
@@ -32,3 +43,4 @@ Welcome to the NeoMeme Markets documentation site. This site contains the compre
 
 ## Architecture Diagram
 ![System Architecture](./assets/architecture.svg)
+
