@@ -6,24 +6,19 @@
 </p>
 
 <p align="center">
-  <!-- Releases & Repo -->
+  <span>Releases &amp; Repo:</span>
   <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/v/release/Snapwave333/membot?style=for-the-badge&label=Release" alt="Latest release" /></a>
   <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/downloads/Snapwave333/membot/latest/total?style=for-the-badge&label=Downloads" alt="Downloads" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00D4FF?style=for-the-badge" alt="License" /></a>
   <a href="https://github.com/Snapwave333/membot"><img src="https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&color=ffdd57" alt="Stars" /></a>
-</p>
-
-<p align="center">
-  <!-- CI Status -->
-  <b>CI Status:</b>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <span>CI Status:</span>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/snake.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/snake.yml/badge.svg?branch=main" alt="Snake CI (build)" /></a>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml/badge.svg?branch=main" alt="Python Tests (unit)" /></a>
-  <a href="https://github.com/Snapwave333/membot/actions/workflows/lint.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/lint.yml/badge.svg?branch=main" alt="Lint & Type Check" /></a>
+  <a href="https://github.com/Snapwave333/membot/actions/workflows/lint.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/lint.yml/badge.svg?branch=main" alt="Lint &amp; Type Check" /></a>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml/badge.svg?branch=main" alt="Docs Link Check (Lychee)" /></a>
-</p>
-
-<p align="center">
-  <!-- Repo Metrics -->
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <span>Repo Metrics:</span>
   <img src="https://img.shields.io/github/last-commit/Snapwave333/membot?style=for-the-badge" alt="Last commit" />
   <a href="https://github.com/Snapwave333/membot/issues"><img src="https://img.shields.io/github/issues/Snapwave333/membot?style=for-the-badge" alt="Open issues" /></a>
   <a href="https://github.com/Snapwave333/membot/pulls"><img src="https://img.shields.io/github/issues-pr/Snapwave333/membot?style=for-the-badge" alt="Open PRs" /></a>
