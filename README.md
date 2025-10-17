@@ -13,6 +13,7 @@
   <a href="https://github.com/Snapwave333/membot/actions/workflows/snake.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/snake.yml/badge.svg?branch=main" alt="Snake CI" /></a>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml/badge.svg?branch=main" alt="Python Tests" /></a>
   <a href="https://github.com/Snapwave333/membot/actions/workflows/lint.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/lint.yml/badge.svg?branch=main" alt="Lint & Type Check" /></a>
+  <a href="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml/badge.svg?branch=main" alt="Docs Link Check" /></a>
   <img src="https://img.shields.io/github/last-commit/Snapwave333/membot?style=for-the-badge" alt="Last commit" />
   <a href="https://github.com/Snapwave333/membot/issues"><img src="https://img.shields.io/github/issues/Snapwave333/membot?style=for-the-badge" alt="Open issues" /></a>
   <a href="https://github.com/Snapwave333/membot/pulls"><img src="https://img.shields.io/github/issues-pr/Snapwave333/membot?style=for-the-badge" alt="Open PRs" /></a>
