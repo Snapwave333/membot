@@ -7,6 +7,9 @@ exclude = [
   "github-readme-stats.vercel.app",
   "capsule-render.vercel.app",
   "raw.githubusercontent.com/.*/output/github-contribution-grid-snake.svg",
+  # Ignore Jekyll-generated internal links to .html in markdown
+  "^\\./.+\\.html$",
+  "^\\.\\./.+\\.html$",
 ]
 # Accept localhost links (not used, but safe)
 accept = ["200..399"]
