@@ -12,6 +12,7 @@ on:
       - 'SOLANAINTEGRATION.md'
       - 'KRAKENCOMPLIANCE.md'
       - 'PROJECT_SUMMARY.md'
+      - 'lychee.toml'
   workflow_dispatch:
 
 jobs:
