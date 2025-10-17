@@ -37,6 +37,7 @@ For a friendly step-by-step, see the Idiot’s Guide: https://github.com/Snapwav
 - [User Manual](./user-manual.html)
 - [Troubleshooting Index](./troubleshooting.html)
 - [Diagrams](./diagrams.html)
+- [Audio & Video Guides](./media-guides.html)
 - [CHANGELOG](https://github.com/Snapwave333/membot/blob/main/CHANGELOG.md)
 - [README](https://github.com/Snapwave333/membot/blob/main/README.md)
 - [Idiot's Guide](https://github.com/Snapwave333/membot/blob/main/IDIOTS_GUIDE.md)
