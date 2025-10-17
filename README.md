@@ -40,6 +40,8 @@ NeoMeme Markets is a secure, autonomous trading bot for memeâ€‘coins with failâ€
 
 - [Download](#download)
 - [Releases](#releases)
+- [User Manual](USER_MANUAL.md)
+- [Idiot's Guide](IDIOTS_GUIDE.md)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
@@ -65,7 +67,10 @@ NeoMeme Markets is a secure, autonomous trading bot for memeâ€‘coins with failâ€
 - Latest Windows installer (recommended):
   - Direct link: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
   - Specific version: https://github.com/Snapwave333/membot/releases/download/v1.0.1/NeoMemeMarkets-Setup.exe
-- Portable ZIP: `electron/out/make/zip/win32/x64/NeoMeme Markets-win32-x64-1.0.1.zip` (for advanced users)
+
+- Documentation:
+  - User Manual (Markdown): [USER_MANUAL.md](USER_MANUAL.md)
+  - Idiot's Guide (Markdown): [IDIOTS_GUIDE.md](IDIOTS_GUIDE.md)
 
 Note: The Windows wrapper expects a Python virtual environment to be present with dependencies installed. See Getting Started.
 
