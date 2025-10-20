@@ -26,7 +26,7 @@ jobs:
           echo '---' >> docs/user-manual.md
           cat USER_MANUAL.md >> docs/user-manual.md
       - name: Commit synced manual
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Docs: Sync docs/user-manual.md from root USER_MANUAL.md"
           file_pattern: docs/user-manual.md
