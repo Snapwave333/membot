@@ -1,454 +1,721 @@
-# NeoMeme Markets — Autonomous Hardened Meme‑Coin Trading Bot
+<div align="center">
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:00f5d4,100:00b3f0&text=NeoMeme%20Markets&fontColor=001018&fontAlign=50&fontAlignY=40&desc=Autonomous%20Hardened%20Meme%E2%80%91Coin%20Trading%20Bot&descAlign=50&descAlignY=75&animation=twinkling" alt="NeoMeme Markets Animated Banner" width="100%" />
-  
-</p>
+# 🚀 NeoMeme Markets
 
-<p align="center">
-  <span>Releases &amp; Repo:</span>
-  <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/v/release/Snapwave333/membot?style=for-the-badge&label=Release" alt="Latest release" /></a>
-  <a href="https://github.com/Snapwave333/membot/releases/latest"><img src="https://img.shields.io/github/downloads/Snapwave333/membot/latest/total?style=for-the-badge&label=Downloads" alt="Downloads" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00D4FF?style=for-the-badge" alt="License" /></a>
-  <a href="https://github.com/Snapwave333/membot"><img src="https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&color=ffdd57" alt="Stars" /></a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <span>CI Status:</span>
-  <a href="https://github.com/Snapwave333/membot/actions/workflows/snake.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/snake.yml/badge.svg?branch=main" alt="Snake CI (build)" /></a>
-  <a href="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/python-tests.yml/badge.svg?branch=main" alt="Python Tests (unit)" /></a>
-  <a href="https://github.com/Snapwave333/membot/actions/workflows/lint.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/lint.yml/badge.svg?branch=main" alt="Lint &amp; Type Check" /></a>
-  <a href="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml"><img src="https://github.com/Snapwave333/membot/actions/workflows/docs-link-check.yml/badge.svg?branch=main" alt="Docs Link Check (Lychee)" /></a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <span>Repo Metrics:</span>
-  <img src="https://img.shields.io/github/last-commit/Snapwave333/membot?style=for-the-badge" alt="Last commit" />
-  <a href="https://github.com/Snapwave333/membot/issues"><img src="https://img.shields.io/github/issues/Snapwave333/membot?style=for-the-badge" alt="Open issues" /></a>
-  <a href="https://github.com/Snapwave333/membot/pulls"><img src="https://img.shields.io/github/issues-pr/Snapwave333/membot?style=for-the-badge" alt="Open PRs" /></a>
-  <img src="https://img.shields.io/github/languages/code-size/Snapwave333/membot?style=for-the-badge" alt="Code size" />
-  <img src="https://img.shields.io/github/repo-size/Snapwave333/membot?style=for-the-badge" alt="Repo size" />
-</p>
+### Autonomous Hardened Meme-Coin Trading Bot
 
-<p align="center">
-  <a href="#download">Download</a> •
-  <a href="#features">Features</a> •
-  <a href="#screenshots">Screenshots</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#desktop-app-windows">Desktop App</a> •
-  <a href="#security">Security</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#roadmap">Roadmap</a> •
-  <a href="#faq">FAQ</a> •
-  <a href="#contributing">Contributing</a>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&customColorList=12,20,24&text=NeoMeme%20Markets&fontColor=00ffcc&fontAlign=50&fontAlignY=35&desc=Trade%20Smarter.%20Stay%20Safer.&descAlign=50&descAlignY=60&animation=twinkling" alt="NeoMeme Markets" width="100%" />
 
-> Quick Start for First‑Timers
-> - Idiot’s Guide: [IDIOTS_GUIDE.md](IDIOTS_GUIDE.md)
-> - Direct installer: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
-> - Make one tiny live trade, then switch back to Simulation (Paper Mode)
-> - Safety first: use Kill Switch or Emergency Stop anytime
-NeoMeme Markets is a secure, autonomous trading bot for meme‑coins with fail‑closed security defaults, comprehensive safety controls, Kraken compliance layer, Solana integration, and Telegram signal processing. It features a layered brain that combines rules-based logic with machine learning, and a minimal desktop wrapper for Windows built with Electron Forge.
+[![Release](https://img.shields.io/github/v/release/Snapwave333/membot?style=for-the-badge&logo=github&color=00d4ff&labelColor=0d1117)](https://github.com/Snapwave333/membot/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Snapwave333/membot/total?style=for-the-badge&logo=download&color=00ff88&labelColor=0d1117)](https://github.com/Snapwave333/membot/releases)
+[![License](https://img.shields.io/badge/License-MIT-ffcc00?style=for-the-badge&logo=opensourceinitiative&labelColor=0d1117)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/Snapwave333/membot?style=for-the-badge&logo=star&color=ffdd57&labelColor=0d1117)](https://github.com/Snapwave333/membot/stargazers)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&labelColor=0d1117)](https://python.org)
 
+<br/>
 
-## Table of Contents
+**🔐 Fail-Closed Security** • **🧠 AI-Powered Decisions** • **⚡ Multi-Chain Support** • **📊 Real-Time Compliance**
 
-- [Download](#download)
-- [Releases](#releases)
-- [User Manual](USER_MANUAL.md)
-- [Idiot's Guide](IDIOTS_GUIDE.md)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Getting Started](#getting-started)
-- [Desktop App (Windows via Electron Forge)](#desktop-app-windows-via-electron-forge)
-- [Live Mode](#live-mode)
-- [Security](#security)
-- [Recent Changes](#recent-changes)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Environment Variables](#environment-variables)
-- [Development](#development)
-- [Security Considerations](#security-considerations)
-- [Roadmap](#roadmap)
-- [GitHub History 📈](#github-history-)
-- [FAQ](#faq)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+<br/>
 
-## Download
+[<img src="https://img.shields.io/badge/📥_Download_Now-00d4ff?style=for-the-badge&logoColor=white" height="40"/>](https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe)
+&nbsp;&nbsp;
+[<img src="https://img.shields.io/badge/📖_User_Manual-00ff88?style=for-the-badge" height="40"/>](USER_MANUAL.md)
+&nbsp;&nbsp;
+[<img src="https://img.shields.io/badge/🎯_Quick_Start-ffcc00?style=for-the-badge" height="40"/>](IDIOTS_GUIDE.md)
 
-- Latest Windows installer (recommended):
-  - Direct link: https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe
-  - Specific version: https://github.com/Snapwave333/membot/releases/download/v1.0.1/NeoMemeMarkets-Setup.exe
+</div>
 
-- Documentation:
-  - User Manual (Markdown): [USER_MANUAL.md](USER_MANUAL.md)
-  - Idiot's Guide (Markdown): [IDIOTS_GUIDE.md](IDIOTS_GUIDE.md)
+---
 
-Note: The Windows wrapper expects a Python virtual environment to be present with dependencies installed. See Getting Started.
+<div align="center">
 
-## Releases
+## 💡 Why NeoMeme Markets?
 
-- Latest release: https://github.com/Snapwave333/membot/releases/latest
-- v1.0.0 initial release: https://github.com/Snapwave333/membot/releases/tag/v1.0.0
-- v1.0.1 tag: https://github.com/Snapwave333/membot/releases/tag/v1.0.1
+</div>
 
-Release badges are shown at the top of this README. Full changelog is maintained via commit history and release notes. For upcoming versions and templates, see the Releases/ folder in the repo.
+<table>
+<tr>
+<td width="33%" align="center">
 
-## Features
+### 🛡️ Security First
 
-### 🔒 Security & Safety
-- **Fail-Closed Security**: Refuses to trade when in doubt
-- **Encrypted Hot Wallets**: Secure key management with Argon2 KDF and AES-GCM for EVM and Solana
-- **Paper Mode**: Fully functional isolated testing environment
-- **Safety Controls**: Kill-switch, profit sweep, position limits
+**Fail-closed architecture** that refuses to trade when uncertain. Your funds stay safe with encrypted wallets, kill-switches, and comprehensive audit trails.
 
-### 🏛️ Kraken Compliance Layer
-- **Token Safety Assessment**: Bytecode analysis, owner privilege detection
-- **Liquidity Analysis**: LP token lock verification, router compatibility
-- **Holder Distribution**: Top holder concentration analysis
-- **Social Verification**: Multi-source corroboration
-- **External Tool Integration**: DexScreener, Birdeye validation
-- **Hard Veto System**: Automatic blocking of unsafe tokens
+</td>
+<td width="33%" align="center">
 
-### ⚡ Solana Integration
-- **SPL Token Support**: Native Solana token trading
-- **DEX Integration**: Serum, Orca, Raydium, Jupiter aggregator
-- **Compute Budget Optimization**: Transaction priority and fee management
-- **Multi-Chain Support**: Simultaneous EVM and Solana operations
+### 🧠 Smart Trading
 
-### 📡 Signal Processing (Telegram)
-- **Real-Time Signal Ingestion**: Telegram Bot API integration
-- **Astroturf Detection**: Bot account identification, fake engagement detection
-- **Multi-Source Corroboration**: Signal validation across platforms
-- **Rate Limiting**: Throttling and spam protection
+**Layered intelligence** combining rule-based logic with ML predictions. Kraken compliance scoring ensures you only trade safe tokens.
 
-### 🧠 Intelligent Trading
-- **Layered Brain**: Rules engine + ML components for decision making
-- **Kraken Weighting**: ML confidence adjustment based on compliance
-- **Real-Time Analysis**: Market data, sentiment, risk assessment
-- **Adaptive Strategies**: Dynamic position sizing and risk management
+</td>
+<td width="33%" align="center">
 
-### 🖥️ User Interface & Infrastructure
-- **Native GUI**: Secure PySide6 interface with multi-chain support
-- **Comprehensive Logging**: Full audit trail with database persistence
-- **Unit Tests**: Complete test coverage with pytest
-- **PAPER_MODE Demo**: Comprehensive demonstration script
+### ⚡ Multi-Chain
 
-## Screenshots
+**Solana + EVM support** with real-time market monitoring, DEX integration, and optimized transaction execution.
 
-<p align="center">
-  <img src="assets/sprites/avatar_bot_happy.png" alt="Bot Happy" width="80" />
-  <img src="assets/sprites/avatar_bot_neutral.png" alt="Bot Neutral" width="80" />
-  <img src="assets/sprites/avatar_bot_alert.png" alt="Bot Alert" width="80" />
-</p>
+</td>
+</tr>
+</table>
 
-<details>
-  <summary>Theme & Sprites</summary>
-  <p>NeoMeme Markets includes a sprite system and animations for visual feedback in the GUI, aligned to the "Neo" theme.</p>
+---
+
+<div align="center">
+
+## 🎮 Bot Personalities
+
+<img src="assets/sprites/avatar_bot_happy.png" alt="Happy" width="100" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="assets/sprites/avatar_bot_neutral.png" alt="Neutral" width="100" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="assets/sprites/avatar_bot_alert.png" alt="Alert" width="100" />
+
+*Happy* • *Neutral* • *Alert*
+
+Your bot adapts its personality based on market conditions and portfolio health!
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+<details open>
+<summary><strong>Click to expand</strong></summary>
+
+- [Quick Start](#-quick-start)
+- [Features](#-features)
+  - [Security & Safety](#-security--safety)
+  - [Kraken Compliance](#-kraken-compliance-layer)
+  - [Intelligent Trading](#-intelligent-trading)
+  - [Multi-Chain Support](#-multi-chain-support)
+  - [Signal Processing](#-signal-processing)
+- [Architecture](#-architecture)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Desktop App](#-desktop-app-windows)
+- [Tech Stack](#-tech-stack)
+- [Performance](#-performance)
+- [Roadmap](#-roadmap)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [License](#-license)
+
 </details>
 
-## Getting Started
+---
 
-### Quick Start (Paper Mode)
+## ⚡ Quick Start
 
-1. Clone and setup:
 ```bash
-git clone <repo>
+# 1. Clone the repository
+git clone https://github.com/Snapwave333/membot.git
 cd membot
+
+# 2. Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
-```
 
-2. Configure environment:
-```bash
-cp .env.example .env
-# Edit .env with your configuration (no real keys needed for paper mode)
-```
+# 4. Configure environment
+cp env.example .env
+# Edit .env with your settings
 
-3. Run PAPER_MODE demonstration:
-```bash
-# Windows
-runpaperdemo.bat
-
-# Linux/Mac
-./runpaperdemo.sh
-
-# Or run directly
-python run_paper_demo.py
-```
-
-4. Run in paper mode:
-```bash
+# 5. Run in Paper Mode (safe testing)
 python main.py --paper-mode
 ```
 
-### Desktop App (Windows via Electron Forge)
+<div align="center">
 
-Build and run a Windows desktop wrapper that launches the Python GUI.
+### 🎯 First Time? Start Here!
 
-- Install Node.js deps:
+[![Idiot's Guide](https://img.shields.io/badge/📚_Read_the_Idiot's_Guide-ff6b6b?style=for-the-badge)](IDIOTS_GUIDE.md)
+
+*No crypto experience needed. We'll walk you through everything.*
+
+</div>
+
+---
+
+## ✨ Features
+
+### 🔒 Security & Safety
+
+<table>
+<tr>
+<td width="50%">
+
+**Fail-Closed Architecture**
+- Refuses to trade when in doubt
+- Encrypted hot wallets (Argon2 KDF + AES-GCM)
+- Isolated paper mode for testing
+- Comprehensive audit logging
+
+</td>
+<td width="50%">
+
+**Safety Controls**
+- 🚨 **Kill Switch** - Instant emergency stop
+- 💰 **Profit Sweep** - Auto-secure gains
+- 📊 **Position Limits** - Prevent overexposure
+- ⛔ **Daily Loss Caps** - Protect your capital
+
+</td>
+</tr>
+</table>
+
+### 🦑 Kraken Compliance Layer
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[Token Discovery] --> B{Kraken Analysis}
+    B --> C[Bytecode Scan]
+    B --> D[Holder Distribution]
+    B --> E[Liquidity Check]
+    B --> F[Social Verification]
+    C --> G{Score >= 70?}
+    D --> G
+    E --> G
+    F --> G
+    G -->|Yes| H[✅ Safe to Trade]
+    G -->|No| I[🚫 Blocked]
+```
+
+</div>
+
+- **Token Safety Assessment** - Bytecode analysis, owner privilege detection
+- **Liquidity Verification** - LP lock status, router compatibility
+- **Holder Analysis** - Top holder concentration, whale detection
+- **Social Signals** - Multi-source corroboration, DexScreener/Birdeye validation
+- **Hard Veto System** - Automatic blocking of unsafe tokens (score < 60)
+
+### 🧠 Intelligent Trading
+
+<table>
+<tr>
+<td width="50%">
+
+**Layered Brain Architecture**
+
+```
+┌─────────────────┐
+│   ML Engine     │ (40% weight)
+│  • Price Pred   │
+│  • Volume Pred  │
+│  • Sentiment    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Rules Engine   │ (60% weight)
+│  • Entry Rules  │
+│  • Exit Rules   │
+│  • Risk Rules   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Trading Signal  │
+│ Confidence ≥ 0.6│
+└─────────────────┘
+```
+
+</td>
+<td width="50%">
+
+**ML Models**
+- 📈 **Price Prediction** - XGBoost, LightGBM
+- 📊 **Volume Forecasting** - Trend analysis
+- 💭 **Sentiment Analysis** - Market mood
+- ⚠️ **Risk Assessment** - Position scoring
+- 🎯 **Confidence Calibration** - Kraken-weighted
+
+**Risk Management**
+- Position sizing: 2% of portfolio
+- Stop-loss: 8% below entry
+- Take-profit: 15% above entry
+- Max concurrent positions: 5
+- Daily loss limit: 5%
+
+</td>
+</tr>
+</table>
+
+### ⛓️ Multi-Chain Support
+
+<div align="center">
+
+| Chain | Features | DEX Integration |
+|-------|----------|-----------------|
+| **Solana** | SPL tokens, compute budget optimization | Jupiter, Raydium, Orca, Serum |
+| **Ethereum** | ERC-20 tokens, gas optimization | Uniswap, SushiSwap, 1inch |
+
+</div>
+
+**Key Capabilities:**
+- 🔄 Real-time RPC with automatic failover
+- 📡 Health monitoring and rate limiting
+- 💸 Transaction priority and fee management
+- 🌐 Simultaneous multi-chain operations
+
+### 📡 Signal Processing
+
+- **Telegram Integration** - Real-time signal ingestion via Bot API
+- **Astroturf Detection** - Identifies bot accounts, fake engagement, spam
+- **Multi-Source Validation** - Cross-platform signal corroboration
+- **Rate Limiting** - Intelligent throttling and spam protection
+- **Signal Strength Classification** - Weighted confidence scoring
+
+---
+
+## 🏗️ Architecture
+
+```
+NeoMeme Markets/
+├── 🧠 src/brain/           # AI & Decision Making
+│   ├── rules_engine.py     # Rule-based trading logic
+│   └── ml_engine.py        # Machine learning predictions
+│
+├── 🔒 src/security/        # Safety & Compliance
+│   ├── wallet_manager.py   # Encrypted wallet management
+│   ├── contract_checker.py # Kraken compliance layer
+│   └── scam_detector.py    # Heuristic scam detection
+│
+├── 💹 src/trading/         # Core Trading Engine
+│   ├── strategy.py         # Trading strategy orchestration
+│   ├── exchange.py         # DEX/CEX interface
+│   └── risk_manager.py     # Portfolio risk management
+│
+├── 📊 src/data/            # Market Data Layer [NEW!]
+│   ├── rpc_connector.py    # Ethereum RPC with failover
+│   ├── solana_rpc.py       # Solana RPC connector
+│   ├── market_watcher.py   # Real-time price monitoring
+│   └── live_fetcher.py     # Live market data aggregation
+│
+├── 🖥️ src/gui/             # User Interface
+│   └── main_window.py      # PySide6 desktop application
+│
+├── 📡 src/integrations/    # External Services
+│   └── telegram_listener.py # Signal ingestion
+│
+└── 🛠️ src/utils/           # Infrastructure
+    ├── database.py         # SQLAlchemy persistence
+    ├── logger.py           # Structured logging
+    └── scheduler.py        # Task orchestration
+```
+
+<div align="center">
+
+[![Architecture Diagram](https://img.shields.io/badge/📐_View_Full_Architecture-blue?style=for-the-badge)](PROJECT_SUMMARY.md)
+
+</div>
+
+---
+
+## 💻 Installation
+
+### Prerequisites
+
+- Python 3.11+ (3.12 recommended)
+- Node.js 18+ (for desktop app)
+- Git
+
+### Method 1: Python Package (Recommended)
+
+```bash
+git clone https://github.com/Snapwave333/membot.git
+cd membot
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Method 2: Docker
+
+```bash
+docker build -t neomeme-markets .
+docker run -d \
+  --name neomeme-bot \
+  -v $(pwd)/.env:/app/.env \
+  neomeme-markets
+```
+
+### Method 3: Windows Desktop App
+
+1. Download the installer:
+
+   [![Download Installer](https://img.shields.io/badge/📥_NeoMemeMarkets--Setup.exe-00d4ff?style=for-the-badge)](https://github.com/Snapwave333/membot/releases/latest/download/NeoMemeMarkets-Setup.exe)
+
+2. Run the installer
+3. Ensure Python venv is set up (see [Troubleshooting](#troubleshooting))
+
+---
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+Create a `.env` file from the template:
+
+```bash
+cp env.example .env
+```
+
+<details>
+<summary><strong>📋 Required Configuration</strong></summary>
+
+```bash
+# RPC Endpoints
+ETHRPCPRIMARY=https://mainnet.infura.io/v3/YOUR_KEY
+ETHRPCFALLBACK=https://eth-mainnet.alchemyapi.io/v2/YOUR_KEY
+SOLANARPCPRIMARY=https://api.mainnet-beta.solana.com
+SOLANARPCFALLBACK=https://solana-api.projectserum.com
+
+# Wallet Configuration
+COLDSTORAGEADDRESS=0x...  # Your cold storage
+HOTWALLETADDRESS=0x...    # Trading wallet
+
+# Trading Parameters
+DAILY_MAX_LOSS_PERCENT=5.0
+PROFIT_SWEEP_THRESHOLD=1000.0
+PER_TRADE_PCT=2.0
+MAX_CONCURRENT_POSITIONS=5
+```
+
+</details>
+
+<details>
+<summary><strong>📋 Optional Configuration</strong></summary>
+
+```bash
+# Telegram (for signals)
+TELEGRAMBOTTOKEN=your_bot_token
+TELEGRAMCHATID=-100...
+
+# Notifications
+NOTIFIERTOKEN=your_notification_token
+DISCORDWEBHOOK=https://discord.com/api/webhooks/...
+
+# External Services
+MODELSTOREURL=https://...
+INDEXERURL=https://...
+```
+
+</details>
+
+---
+
+## 🎮 Usage
+
+### Paper Mode (Testing)
+
+```bash
+# Full demo simulation
+python run_paper_demo.py
+
+# Or start the bot
+python main.py --paper-mode
+```
+
+### Live Mode (Real Trading)
+
+⚠️ **Warning**: Live trading involves real money. Follow the [deployment checklist](DEPLOYMENT.md) carefully.
+
+```bash
+# Validate configuration
+python main.py --validate
+
+# Enable live trading
+python main.py --live
+```
+
+### GUI Application
+
+```bash
+# Launch the desktop interface
+python src/gui/main_window.py
+```
+
+---
+
+## 🖥️ Desktop App (Windows)
+
+Build a native Windows application with Electron Forge:
+
 ```bash
 cd electron
 npm install
-```
-- Dev run (spawns Python GUI using venv):
-```bash
-npm start
-```
-- Build Windows installer (Squirrel):
-```bash
-npm run make
-# Output: electron/out/make/squirrel.windows/x64/NeoMemeMarkets-Setup.exe
-```
-Notes:
-- The launcher executes `../venv/Scripts/python.exe src/gui/main_window.py` with `PYTHONPATH` set to the repo root.
-- Ensure the Python venv and dependencies are installed before running the installer; alternatively, bundle with PyInstaller and ship the EXE via Forge `extraResources`.
-
-### Live Mode
-
-To enable live mode trading, review and follow deployment safeguards in `DEPLOYMENT.md` and enable feature flags in your `.env`.
-
-```bash
-python main.py --live-mode
-```
-Ensure you understand all safety controls before enabling live trading.
-
-## Security
-
-- All secrets loaded from `.env` file
-- Encrypted private key storage with secure passphrase
-- Fail-closed defaults (refuses to trade when uncertain)
-- Paper mode isolation from real trading
-- Comprehensive audit logging
-- Kill-switch and emergency controls
-
-## Recent Changes
-- Solana wallet-only flow (remove PayPal)
-- Scam Detection tab with heuristics
-- Axiom.trade Discovery integration
-- Digital Wallet tab: init, reinvest, withdraw, trade history
-- Market Mode toggle (Simulation/Live)
-- NeoMeme Markets theme, sprites, animations
-- Accordion-style collapsible sections and scroll areas
-- Electron Forge Windows installer
-
-## Architecture
-
-High-level layout:
-
-```
-NeoMeme-Markets (membot)/
-├── src/
-│   ├── config.py              # Configuration parameters
-│   ├── security/
-│   │   └── wallet_manager.py  # Encrypted wallet management
-│   ├── security/contract_checker.py  # Token safety assessment
-│   ├── trading/
-│   │   ├── exchange.py        # Exchange interface
-│   │   ├── strategy.py        # Trading strategies
-│   │   └── risk_manager.py    # Risk management
-│   ├── brain/
-│   │   ├── rules_engine.py    # Rules-based logic
-│   │   └── ml_engine.py       # Machine learning components
-│   ├── gui/
-│   │   └── main_window.py     # PySide6 GUI
-│   └── utils/
-│       ├── logger.py          # Logging utilities
-│       └── database.py        # Database operations
-├── tests/                     # Unit tests
-├── .env.example              # Environment template
-├── requirements.txt          # Python dependencies
-├── pyproject.toml           # Project configuration
-├── Dockerfile               # Container configuration
-└── main.py                  # Application entry point
+npm start        # Development
+npm run make     # Build installer
 ```
 
-See also:
-- Kraken Compliance: `KRAKENCOMPLIANCE.md`
-- Solana Integration: `SOLANAINTEGRATION.md`
-- Deployment Checklist: `DEPLOYMENT.md`
-- Project Overview: `PROJECT_SUMMARY.md`
+Output: `electron/out/make/squirrel.windows/x64/NeoMemeMarkets-Setup.exe`
 
-## Tech Stack
+---
 
-<p>
-  <img alt="Python" title="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="45" />
-  <img alt="Node.js" title="Node.js" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" />
-  <img alt="Electron" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="45" />
-  <img alt="Qt" title="Qt (PySide6)" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" height="45" />
-  <img alt="JavaScript" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="45" />
-  <img alt="Docker" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="45" />
-  <img alt="Git" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="45" />
-  <img alt="GitHub" title="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" />
-  <img alt="Windows" title="Windows" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="45" />
-  <img alt="Linux" title="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="45" />
-</p>
+## 🛠️ Tech Stack
 
-Tech highlights: Python 3.11/3.12, PySide6 (Qt), Electron Forge (Windows wrapper), WebSockets, Solana/EVM tooling, pytest.
+<div align="center">
 
-## Environment Variables
+<img src="https://skillicons.dev/icons?i=python,nodejs,electron,qt,docker,git,github,linux,windows&perline=9" />
 
-See `.env.example` for required configuration variables:
+</div>
 
-### RPC Endpoints
-- `ETHRPCPRIMARY`, `ETHRPCFALLBACK`: Ethereum RPC endpoints
-- `SOLANARPCPRIMARY`, `SOLANARPCFALLBACK`: Solana RPC endpoints
-- `WSMEMPOOLPRIMARY`: WebSocket mempool connection
+<table>
+<tr>
+<td width="50%">
 
-### Security & Trading
-- `COLDSTORAGEADDRESS`: Cold storage wallet address
-- `NOTIFIERTOKEN`: Notification service token
-- `TELEGRAMBOTTOKEN`: Telegram bot token for signal ingestion
+**Core**
+- Python 3.11/3.12
+- PySide6 (Qt GUI)
+- SQLAlchemy (Database)
+- Structlog (Logging)
 
-### External Services
-- `MODELSTOREURL`: ML model storage URL
-- `INDEXERURL`: Blockchain indexer URL
-- `BACKUPSTORAGEURL`: Backup storage URL
-- `GUIAPISOCKET`: GUI API socket path
+**ML & Data**
+- XGBoost
+- LightGBM
+- Scikit-learn
+- Pandas/NumPy
 
-### Feature Flags
-- `SOLANAMODE`: Enable Solana trading (true/false)
-- `TELEGRAMMODE`: Enable Telegram signal processing (true/false)
-- `PAPERMODE`: Run in paper mode (true/false)
+</td>
+<td width="50%">
 
-## Development
+**Blockchain**
+- Web3.py (Ethereum)
+- Solana-py
+- Solders
 
-Run tests:
-```bash
-pytest tests/
+**Infrastructure**
+- Electron Forge (Desktop)
+- Docker
+- pytest (Testing)
+- APScheduler
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📈 Performance
+
+<div align="center">
+
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **Watch Interval** | 30 seconds | Configurable |
+| **Min Trade Interval** | 5 minutes | Prevents overtrading |
+| **Max Hold Time** | 24 hours | Position timeout |
+| **Signal Confidence** | ≥ 0.6 | For valid trades |
+| **Rules/ML Weight** | 60/40 | Hybrid decision |
+| **Log Retention** | 90 days | Audit trail |
+| **Paper Balance** | $10,000 USD | + 5 ETH |
+
+</div>
+
+---
+
+## 🗺️ Roadmap
+
+<div align="center">
+
+```mermaid
+timeline
+    title NeoMeme Markets Development Roadmap
+    v1.0 : Initial Release
+         : Core trading engine
+         : Kraken compliance
+         : Paper mode
+    v1.1 : Performance & Safety
+         : Python 3.12 optimizations
+         : Enhanced risk controls
+         : Modular strategies
+    v1.2 : Multi-Chain & Arbitrage
+         : Cross-chain execution
+         : DEX routing optimization
+         : Arbitrage detection
+    v1.3+ : Enterprise & AI
+          : Compliance & audit trails
+          : Advanced ML models
+          : CEX connectors
 ```
 
-Build Docker image:
-```bash
-docker build -t meme-bot .
+</div>
+
+<details>
+<summary><strong>📋 Detailed Roadmap</strong></summary>
+
+### Phase 1 — v1.1.x (Optimization)
+- Performance: 30%+ faster signal-to-trade
+- Enhanced risk guardrails
+- Modular strategy packs
+- Better Solana routing
+
+### Phase 2 — v1.2.x (Multi-Chain)
+- Cross-chain arbitrage
+- Unified wallet management
+- Smart DEX routing
+- Per-venue risk caps
+
+### Phase 3 — v1.3+ (Enterprise)
+- Audit trail compliance
+- KYC/AML hooks
+- Advanced ML with explainability
+- CEX integration (read-only first)
+
+</details>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Snapwave333&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Snapwave333&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117)
+
+### 🐍 Contribution Snake
+
+![Snake](https://raw.githubusercontent.com/Snapwave333/membot/output/github-contribution-grid-snake.svg)
+
+</div>
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><strong>Is it safe to run live?</strong></summary>
+
+The bot uses **fail-closed security** defaults, but live trading is inherently risky. Always:
+- Review [DEPLOYMENT.md](DEPLOYMENT.md)
+- Start with small allocations
+- Enable the kill-switch
+- Monitor actively at first
+
+</details>
+
+<details>
+<summary><strong>Does it support multiple chains?</strong></summary>
+
+Yes! Solana is prioritized with full DEX integration. EVM support exists for wallet management and compliance checks.
+
+</details>
+
+<details>
+<summary><strong>How do I add a custom strategy?</strong></summary>
+
+1. Implement in `src/trading/strategy.py`
+2. Register with the rules/ML engine
+3. Add tests in `tests/`
+4. Document in strategy config
+
+</details>
+
+<details>
+<summary><strong>What's the minimum capital needed?</strong></summary>
+
+Paper mode: Free (simulated $10,000)
+Live mode: Minimum $100 recommended, but start with what you can afford to lose.
+
+</details>
+
+---
+
+## 🔧 Troubleshooting
+
+<details>
+<summary><strong>Windows Electron launcher: "spawn python.exe ENOENT"</strong></summary>
+
+Ensure virtual environment exists:
+```powershell
+py -3.12 -m venv venv
+venv\Scripts\pip install -r requirements.txt
 ```
 
-## GitHub History 📈
+</details>
 
-<p>
-  <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=Snapwave333&show_icons=true&theme=tokyonight" height="140" />
-  <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Snapwave333&layout=compact&theme=tokyonight" height="140" />
-</p>
+<details>
+<summary><strong>Python 3.13 compatibility issues</strong></summary>
 
-Snake contribution graph:
+Use Python 3.11 or 3.12. The launcher prefers these versions.
 
-<p>
-  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/Snapwave333/membot/output/github-contribution-grid-snake.svg" />
-</p>
+</details>
 
-Note: If the snake image is 404 initially, run the "Generate Datas" workflow once from the Actions tab.
+<details>
+<summary><strong>Solana dependency conflicts</strong></summary>
 
-## Security Considerations
+Use recommended pins:
+```
+solana==0.32.0
+solders==0.20.0
+websockets==11.0
+```
 
-- Never commit `.env` files or private keys
-- Use paper mode for testing
-- Review all security decisions in code comments
-- Follow deployment checklist in `DEPLOYMENT.md`
-- Enable kill-switch before live trading
+</details>
 
-## Roadmap
+---
 
-- v1.1.x
-  - Enhanced Solana DEX routing and fee optimization
-  - Expanded heuristics for scam detection
-  - Modular strategy packs
-- v1.2.x
-  - Cross-chain bridges and EVM execution safety improvements
-  - GUI workflow enhancements and accessibility
+## 🤝 Contributing
 
-## FAQ
+We welcome contributions! Here's how:
 
-- Is it safe to run live?  
-  The bot is built with fail‑closed defaults, but live trading is inherently risky. Review `DEPLOYMENT.md`, use small allocations, and enable the kill‑switch.
-- Does it support multiple chains?  
-  Yes. Solana is prioritized; EVM support exists for wallet management and compliance checks.
-- Why Solana‑only wallet flow now?  
-  We simplified the initial release to Solana to reduce complexity and improve reliability, replacing the earlier PayPal concept.
-- How do I add a new strategy?  
-  Implement it in `src/trading/strategy.py` and register it with the rules/ML engine. Add tests in `tests/`.
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Write** tests for new functionality
+4. **Follow** code style and security guidelines
+5. **Commit** changes (`git commit -m 'feat: add amazing feature'`)
+6. **Push** to branch (`git push origin feature/amazing-feature`)
+7. **Open** a Pull Request
 
-## 🚀 Future Roadmap & Planned Features
+[![Contributors](https://img.shields.io/github/contributors/Snapwave333/membot?style=for-the-badge)](https://github.com/Snapwave333/membot/graphs/contributors)
 
-This roadmap outlines the planned expansion of NeoMeme Markets across three phases. Timelines are indicative and may adjust based on testing and security reviews. Each phase prioritizes fail‑closed safety and compliance.
+---
 
-### Phase 1 — Optimization & Deepening (v1.1.x)
+## 🙏 Acknowledgements
 
-| Area | Goals | Key Deliverables | Success Metrics | Target Release |
-|---|---|---|---|---|
-| **Performance** | Reduce latency and CPU/memory overhead | Python 3.12 optimizations, profiling, async I/O, caching of RPC calls | >30% faster signal‑to‑trade path; lower memory spikes | v1.1.x |
-| **Trading Engine** | Improve strategy depth and execution reliability | Modular strategy packs; slippage/latency aware order placement; liquidity‑weighted position sizing | Fewer failed orders; better P&L consistency | v1.1.x |
-| **Risk & Safety** | Harden guardrails | Daily max loss; portfolio drawdown caps; automatic profit sweep; enhanced kill‑switch semantics | No trades beyond limits; instant stop on kill‑switch | v1.1.x |
-| **Solana Integration** | Better routing & fees | Jupiter routing improvements; compute budget tuning; priority fee management | Lower tx failures and costs | v1.1.x |
-| **EVM Support** | Safer approvals and router handling | Router compatibility matrix; allowance management; gas and nonce reliability | Stable EVM wallet operations | v1.1.x |
-| **GUI/UX** | Clarity and safety | Emergency controls surfaced; status signals; accessibility improvements | Faster operator reaction time | v1.1.x |
-| **Docs & Compliance** | Reliable docs, safety clarity | Kraken Compliance refinements; link linting (Lychee); Mermaid validation; Jekyll sitemap | Clean CI checks; fewer broken links | v1.1.x |
-| **Testing & QA** | Expand coverage and scenarios | Stress and load tests; end‑to‑end paper mode runs; fuzz inputs for safety modules | >85% coverage for critical paths | v1.1.x |
+- [Capsule Render](https://github.com/kyechan99/capsule-render) - Beautiful banners
+- [Electron Forge](https://www.electronforge.io/) - Desktop wrapper
+- [PySide6](https://wiki.qt.io/Qt_for_Python) - Native GUI framework
+- [Skill Icons](https://skillicons.dev/) - Tech stack badges
+- The amazing **Solana** and **Ethereum** developer communities
 
-### Phase 2 — Multi‑Chain & Arbitrage (v1.2.x)
+---
 
-| Area | Goals | Key Deliverables | Success Metrics | Target Release |
-|---|---|---|---|---|
-| **Cross‑Chain Execution** | Operate across Solana + EVM | Unified wallet manager; synchronized balances; execution safety across chains | Reliable cross‑chain trade flow | v1.2.x |
-| **Arbitrage** | Exploit price dislocations | Cross‑DEX and cross‑chain price watchers; safe bridging workflows; configurable latency windows | Measurable arbitrage yield with controlled risk | v1.2.x |
-| **DEX Routing** | Smarter path selection | Route scoring (fees, slippage, reliability); fallback routers; retry policies | Higher fill rates; lower cost basis | v1.2.x |
-| **Risk Across Chains** | Unified guardrails | Cross‑chain exposure limits; per‑venue risk caps; hedging hooks | Stable risk profile during multi‑venue ops | v1.2.x |
-| **Observability** | Holistic monitoring | Cross‑chain P&L; per‑venue metrics; alerting on anomalies | Faster incident detection | v1.2.x |
-| **Automation** | Repeatable workflows | Auto profit sweep; scheduled reconciliations; nightly link checks; optional CRON tasks | Reduced operator workload | v1.2.x |
+## 📄 License
 
-### Phase 3 — Institutionalization & AI (v1.3+)
+<div align="center">
 
-| Area | Goals | Key Deliverables | Success Metrics | Target Release |
-|---|---|---|---|---|
-| **Compliance & Audit** | Enterprise‑grade controls | Audit trails; immutable logs; role‑based access; policy enforcement | External audit readiness | v1.3+ |
-| **KYC/AML Integrations** | Safer counterparty operations | Optional KYC/AML hooks; sanction screening; risk scoring | Lower operational compliance risk | v1.3+ |
-| **AI/ML Advancements** | Smarter decisioning | Model registry; feature store; online learning; confidence calibration; explainability | Better risk‑adjusted returns with transparency | v1.3+ |
-| **Reliability & SRE** | Ops maturity | Health checks; circuit breakers; chaos testing; runbooks; auto remediation hooks | High MTBF; fast MTTR | v1.3+ |
-| **Data & Storage** | Durable state | Versioned datasets; backup/restore; encryption at rest; retention policies | Predictable recovery; secure data | v1.3+ |
-| **Ecosystem Connectors** | Venue expansion | CEX connectors (read‑only first); safe order APIs; bridging orchestration | Expanded market reach safely | v1.3+ |
+MIT License © 2024 [Snapwave333](https://github.com/Snapwave333)
 
-> Note: All features will respect the fail‑closed security posture. Live‑trading features require successful paper‑mode validation and CI pass prior to release.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-## Troubleshooting
+*Free to use, modify, and distribute. See [LICENSE](LICENSE) for details.*
 
-- Windows Electron launcher shows "spawn ... python.exe ENOENT":
-  - Ensure a virtual environment exists at `resources/venv` for the installed app or `../venv` during development.
-  - Create venv and install deps:
-    ```powershell
-    # From repo root
-    py -3.12 -m venv venv  # or py -3.11
-    venv\Scripts\pip install --upgrade pip
-    venv\Scripts\pip install -r requirements.txt
-    ```
-  - For installed app v1.0.0, create `AppData\Local\NeoMemeMarkets\app-1.0.0\resources\venv` and install deps similarly.
+</div>
 
-- Python 3.13 CFFI/package issues:
-  - Use Python 3.12 or 3.11. The launcher prefers these versions.
+---
 
-- Dependency resolution conflicts (solana/solders/websockets):
-  - Recommended pins: `solana==0.32.0`, `solders==0.20.0`, `websockets==11.0`.
+<div align="center">
 
-- Electron Forge build errors under OneDrive (EBUSY):
-  - Build outside OneDrive, e.g., `C:\membot-build\electron`.
+### ⭐ Star this repo if you find it useful!
 
-## Contributing
+<br/>
 
-Contributions, issues, and feature requests are welcome!
+[![Star History](https://img.shields.io/github/stars/Snapwave333/membot?style=social)](https://github.com/Snapwave333/membot/stargazers)
 
-- Fork the repo and create a feature branch
-- Write tests for new functionality
-- Follow code style and security guidelines
-- Open a PR with a clear description and checklist
+<br/>
 
-## Acknowledgements
+**Made with 💜 by the NeoMeme Markets Team**
 
-- Capsule Render banner
-- Electron Forge for the desktop wrapper
-- PySide6 for the GUI
-- The broader open‑source community and tooling around Solana and EVM
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=100&section=footer" width="100%" />
 
-## License
-
-MIT License - see LICENSE file for details.
-
-
-
+</div>
